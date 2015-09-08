@@ -1,6 +1,9 @@
 var fs = require('fs');
 var http = require('http');
 
+var config = require(__dirname + '/../lib/config.js');
+GLOBAL.config = config;
+
 var FFRKProxy = require(__dirname + '/../lib/ffrk-proxy.js');
 var buddyFilter = require(__dirname + "/../lib/filter/buddy.js");
 var enemyFilter = require(__dirname + "/../lib/filter/enemy.js");
