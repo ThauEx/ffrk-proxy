@@ -1,0 +1,10 @@
+{
+  "name": "ffrk-proxy",
+  "version": "0.1.0",
+  "private": true,
+  "start": "node bin/app.js",
+  "scripts": {
+    "start" : "node bin/app.js"
+   },
+  "dependencies": {}
+}
