@@ -1,12 +1,13 @@
 /// <reference path="../typings/node/node.d.ts"/>
-var Proxy = require('thin'),
-    path = require('path'),
-    fs = require('fs'),
-    http = require('http'),
-    cert = require(__dirname + '/../lib/cert.js'),
-    helpers = require(__dirname + '/../lib/helpers.js');
+var Proxy = require('thin');
+var path = require('path');
+var fs = require('fs');
+var http = require('http');
+var cert = require(__dirname + '/../lib/cert.js');
+var helpers = require(__dirname + '/../lib/helpers.js');
 
 var buddyFilter = require(__dirname + "/../lib/filter/buddy.js");
+var enemyFilter = require(__dirname + "/../lib/filter/enemy.js");
 
 var proxy = new Proxy({
     followRedirect: true,
@@ -33,8 +34,10 @@ proxy.use(function(clientReq, clientRes, next) {
                             json = new Function('return ' + content)();
                         }
 
-                        var buddyJson = json.battle.buddy;
-                        json.battle.buddy = buddyFilter.update(buddyJson);
+                        fs.writeFileSync(__dirname + "/../dump/get_battle_init_data-" + process.hrtime() + ".json", json);
+
+                        json.battle.buddy = buddyFilter.update(json.battle.buddy);
+                        json.battle.rounds = enemyFilter.update(json.battle.rounds);
 
                         cb(new Buffer(JSON.stringify(json)));
                     }
