@@ -4,6 +4,7 @@ var http = require('http');
 var FFRKProxy = require(__dirname + '/../lib/ffrk-proxy.js');
 var buddyFilter = require(__dirname + "/../lib/filter/buddy.js");
 var enemyFilter = require(__dirname + "/../lib/filter/enemy.js");
+var info = require(__dirname + '/../package.json');
 
 var certStore = {
   rootCaCert: fs.readFileSync(__dirname + '/../cert/root/rootCA.crt', 'utf8'),
@@ -15,7 +16,7 @@ var certStore = {
 var proxy = new FFRKProxy(certStore);
 
 proxy.listen(5050, '0.0.0.0', function(err) {
-  console.log('ffrk-proxy started');
+  console.log('ffrk-proxy ' + info.version + ' started');
   console.log('listening on: 0.0.0.0:5050');
 
   if (err) {
@@ -31,8 +32,6 @@ proxy.on('battleInitData', function(json, callback) {
 });
 
 http.createServer(function(request, response) {
-  console.log('rootCA webserver started');
-  console.log('listening on: 0.0.0.0:5051');
   var filePath = __dirname + '/../cert/root/rootCA.crt';
   var stat = fs.statSync(filePath);
 
@@ -45,4 +44,12 @@ http.createServer(function(request, response) {
   var readStream = fs.createReadStream(filePath);
 
   readStream.pipe(response);
-}).listen(5051);
+}).listen(5051, '0.0.0.0', function(err) {
+  console.log('rootCA webserver started');
+  console.log('listening on: 0.0.0.0:5051');
+
+  if (err) {
+    console.log(err, err.stack.split('\n'));
+    process.exit(1);
+  }
+});
