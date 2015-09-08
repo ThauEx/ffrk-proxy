@@ -1,4 +1,5 @@
 var fs = require('fs');
+var http = require('http');
 
 var FFRKProxy = require(__dirname + '/../lib/ffrk-proxy.js');
 var buddyFilter = require(__dirname + "/../lib/filter/buddy.js");
@@ -28,3 +29,20 @@ proxy.on('battleInitData', function(json, callback) {
   json.battle.rounds = enemyFilter.update(json.battle.rounds);
   callback(json);
 });
+
+http.createServer(function(request, response) {
+  console.log('rootCA webserver started');
+  console.log('listening on: 0.0.0.0:5051');
+  var filePath = __dirname + '/../cert/root/rootCA.crt';
+  var stat = fs.statSync(filePath);
+
+  response.writeHead(200, {
+    'Content-Type': "application/x-x509-ca-cert",
+    'Content-Disposition': 'attachment; filename="rootCa.pem";',
+    'Content-Length': stat.size
+  });
+
+  var readStream = fs.createReadStream(filePath);
+
+  readStream.pipe(response);
+}).listen(5051);
