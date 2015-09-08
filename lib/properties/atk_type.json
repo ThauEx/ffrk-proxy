@@ -1,0 +1,10 @@
+{
+  "DIRECT": {
+    "id": 1,
+    "description": "Melee attack"
+  },
+  "INDIRECT": {
+    "id": 2,
+    "description": "Range attack"
+  }
+}
