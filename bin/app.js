@@ -1,11 +1,18 @@
 /// <reference path="../typings/node/node.d.ts"/>
-var Proxy = require('http-mitm-proxy');
-var proxy = Proxy();
-var path = require('path');
-
-var fs = require("fs");
+var Proxy = require('http-mitm-proxy'),
+	proxy = Proxy(),
+	path = require('path'),
+	fs = require('fs'),
+	cert = require(__dirname + '/../lib/cert.js');
 
 var buddyFilter = require(__dirname + "/../lib/filter/buddy.js");
+
+var rootCACert = fs.readFileSync(__dirname + "/../cert/root/rootCA.crt"),
+	rootCAKey = fs.readFileSync(__dirname + "/../cert/root/rootCA.key");
+
+process.on('uncaughtException', function (err) {
+	console.log(err);
+})
 
 proxy.onError(function (context, err) {
 	console.error('proxy error:', err);
@@ -47,11 +54,19 @@ proxy.onRequest(function (context, callback) {
 	return callback();
 });
 
-proxy.onCertificateRequired = function (hostname, callback) {
+proxy.onCertificateRequired  = function (hostname, callback) {
+	var certPath = path.resolve('./cert/', hostname + '.crt');
+	var keyPath = path.resolve('./cert/', hostname + '.key');
+	var pem = cert.generateForHost(hostname, rootCACert.toString(), rootCAKey.toString());
+
+	//TODO: refactor me async!
+	fs.writeFileSync(certPath, pem.certificate);
+	fs.writeFileSync(keyPath, pem.privateKey);
+
 	return callback(null, {
 		certFile: path.resolve('./cert/', hostname + '.crt'),
 		keyFile: path.resolve('./cert/', hostname + '.key')
-    });
+	});
 };
 
 proxy.listen({
