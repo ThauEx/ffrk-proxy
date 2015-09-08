@@ -1,74 +1,81 @@
 /// <reference path="../typings/node/node.d.ts"/>
-var Proxy = require('http-mitm-proxy'),
-	proxy = Proxy(),
-	path = require('path'),
-	fs = require('fs'),
-	cert = require(__dirname + '/../lib/cert.js');
+var Proxy = require('thin'),
+    path = require('path'),
+    fs = require('fs'),
+    http = require('http'),
+    cert = require(__dirname + '/../lib/cert.js'),
+    helpers = require(__dirname + '/../lib/helpers.js');
 
 var buddyFilter = require(__dirname + "/../lib/filter/buddy.js");
 
-var rootCACert = fs.readFileSync(__dirname + "/../cert/root/rootCA.crt"),
-	rootCAKey = fs.readFileSync(__dirname + "/../cert/root/rootCA.key");
-
-process.on('uncaughtException', function (err) {
-	console.log(err);
-})
-
-proxy.onError(function (context, err) {
-	console.error('proxy error:', err);
+var proxy = new Proxy({
+    followRedirect: true,
+    strictSSL: false,
+    rejectUnauthorized: false,
+    SNICallback: helpers.makeSNICallback()
 });
 
-proxy.onRequest(function (context, callback) {
-	console.log("Requested: " + context.clientToProxyRequest.url);
-	if (context.clientToProxyRequest.headers.host == 'ffrk.denagames.com') {
-		if (context.clientToProxyRequest.url.indexOf('get_battle_init_data') > -1) {
-			var chunks = [];
-			context.use(Proxy.gunzip);
+proxy.use(function(clientReq, clientRes, next) {
+    var reqUrl = clientReq.url;
+    if (clientReq.connection.encrypted) {
+        reqUrl = 'https://' + clientReq.headers.host + reqUrl;
+    }
+    console.log('Proxying:', reqUrl);
 
-			context.onResponseData(function (context, chunk, callback) {
-				chunks.push(chunk);
-			});
+    proxy.forward(clientReq, clientRes, function(proxyReq) {
+        proxyReq.on('response', function (response) {
+            if (clientReq.headers.host == 'ffrk.denagames.com') {
+        		if (clientReq.url.indexOf('get_battle_init_data') > -1) {
+                    var transform = function(content, cb) {
+                        try {
+                            json = JSON.parse(content);
+                        } catch (e) {
+                            json = new Function('return ' + content)();
+                        }
 
-			context.onResponseEnd(function (ctx, chunk, callback) {
-				var buffer = Buffer.concat(chunks);
-				var json = buffer.toString();
+                        var buddyJson = json.battle.buddy;
+                        json.battle.buddy = buddyFilter.update(buddyJson);
 
-				//fs.writeFileSync(__dirname + "/dump/get_battle_init_data-" + Date.now() + ".json", json);
+                        cb(new Buffer(JSON.stringify(json)));
+                    }
 
-				try {
-					json = JSON.parse(json);
-				} catch (e) {
-					json = new Function('return ' + json)();
-				}
-
-				var buddyJson = json.battle.buddy;
-				json.battle.buddy = buddyFilter.update(buddyJson);
-
-				var newChunks = new Buffer(JSON.stringify(json));
-
-				return callback(null, newChunks);
-			});
-		}
-	}
-
-	return callback();
+                    helpers.sendModifiedResponse(clientRes, response, transform);
+                } else {
+                    helpers.sendOriginalResponse(clientRes, response);
+                }
+            } else {
+                helpers.sendOriginalResponse(clientRes, response);
+            }
+        });
+        proxyReq.on('error', function (err) {
+            console.error(err, err.stack.split('\n'));
+            clientRes.end();
+        });
+    });
 });
 
-proxy.onCertificateRequired  = function (hostname, callback) {
-	var certPath = path.resolve('./cert/', hostname + '.crt');
-	var keyPath = path.resolve('./cert/', hostname + '.key');
-	var pem = cert.generateForHost(hostname, rootCACert.toString(), rootCAKey.toString());
-
-	//TODO: refactor me async!
-	fs.writeFileSync(certPath, pem.certificate);
-	fs.writeFileSync(keyPath, pem.privateKey);
-
-	return callback(null, {
-		certFile: path.resolve('./cert/', hostname + '.crt'),
-		keyFile: path.resolve('./cert/', hostname + '.key')
-	});
-};
-
-proxy.listen({
-	port: 5050
+proxy.on('error', function (err) {
+    console.error(err, err.stack.split('\n'));
 });
+
+proxy.listen(5050, '0.0.0.0', function(err) {
+    if(err) {
+        console.log(err, err.stack.split('\n'));
+        process.exit(1);
+    }
+});
+
+http.createServer(function(request, response) {
+    var filePath = path.join(__dirname, '..', 'cert', 'root', 'rootCA.crt');
+    var stat = fs.statSync(filePath);
+
+    response.writeHead(200, {
+        'Content-Type': "application/x-x509-ca-cert",
+        'Content-Disposition': 'attachment; filename="rootCa.pem";',
+        'Content-Length': stat.size
+    });
+
+    var readStream = fs.createReadStream(filePath);
+
+    readStream.pipe(response);
+}).listen(5051);
