@@ -1,0 +1,890 @@
+{
+    {
+		"name": "Staff (IV)",
+		"id": 21009003,
+	},
+	{
+		"name": "Cotton Robe (VI)",
+		"id": 22055002,
+	},
+	{
+		"name": "Dancing Dagger (V)",
+		"id": 21001010,
+	},
+	{
+		"name": "Mythril Dagger (IX)",
+		"id": 21001008,
+	},
+	{
+		"name": "Crystal Shield (VI)",
+		"id": 22050013,
+	},
+	{
+		"name": "Mythril Armlet (VII)",
+		"id": 22056003,
+	},
+	{
+		"name": "Leather Clothing (IV)",
+		"id": 22053003,
+	},
+	{
+		"name": "Leather Armor (III)",
+		"id": 22054002,
+	},
+	{
+		"name": "Kunai (IV)",
+		"id": 21001004,
+	},
+	{
+		"name": "Bone Mail (V)",
+		"id": 22054005,
+	},
+	{
+		"name": "Mythril Claw (VII)",
+		"id": 21007016,
+	},
+	{
+		"name": "Bronze Bangle (VII)",
+		"id": 22056001,
+	},
+	{
+		"name": "Dagger (IX)",
+		"id": 21001003,
+	},
+	{
+		"name": "Crossbow (XII)",
+		"id": 21010014,
+	},
+	{
+		"name": "Galbadian Helmet (VIII)",
+		"id": 22051027,
+	},
+	{
+		"name": "Plumed Hat (V)",
+		"id": 22051001,
+	},
+	{
+		"name": "Silk Robe (VI)",
+		"id": 22055003,
+	},
+	{
+		"name": "Twist Headband (V)",
+		"id": 22051002,
+	},
+	{
+		"name": "Leather Glove (VII)",
+		"id": 21007001,
+	},
+	{
+		"name": "Power Wrist (VII)",
+		"id": 23080001,
+	},
+	{
+		"name": "Hairband (VI)",
+		"id": 22051004,
+	},
+	{
+		"name": "Diamond Vest (VI)",
+		"id": 22053013,
+	},
+	{
+		"name": "Mythril Spear (VI)",
+		"id": 21006005,
+	},
+	{
+		"name": "Spear (XII)",
+		"id": 21006001,
+	},
+	{
+		"name": "Oak Staff (XII)",
+		"id": 21009002,
+	},
+	{
+		"name": "Bronze Shield (V)",
+		"id": 22050002,
+	},
+	{
+		"name": "Mythril Claws (VI)",
+		"id": 21007006,
+	},
+	{
+		"name": "Earring (VII)",
+		"id": 23080002,
+	},
+	{
+		"name": "Frost Bow (V)",
+		"id": 21010005,
+	},
+	{
+		"name": "Kenpo Gi (IV)",
+		"id": 22053007,
+	},
+	{
+		"name": "Tiger Claws (III)",
+		"id": 21007009,
+	},
+	{
+		"name": "Handaxe (XII)",
+		"id": 21004002,
+	},
+	{
+		"name": "Copper Cuirass (V)",
+		"id": 22053001,
+	},
+	{
+		"name": "Beret (VI)",
+		"id": 22051017,
+	},
+	{
+		"name": "Chopper (XII)",
+		"id": 21001006,
+	},
+	{
+		"name": "Zwill Blade (XII)",
+		"id": 21002011,
+	},
+	{
+		"name": "Heavy Shield (VI)",
+		"id": 22050016,
+	},
+	{
+		"name": "Green Beret (IV)",
+		"id": 22051014,
+	},
+	{
+		"name": "Hyper Wrist (VI)",
+		"id": 23080019,
+	},
+	{
+		"name": "Silver Harp (V)",
+		"id": 21011001,
+	},
+	{
+		"name": "Boomerang (VI)",
+		"id": 21013002,
+	},
+	{
+		"name": "Round Shield (XII)",
+		"id": 22050003,
+	},
+	{
+		"name": "Metal Knuckles (VI)",
+		"id": 21007003,
+	},
+	{
+		"name": "Mythril Sword (IV)",
+		"id": 21002004,
+	},
+	{
+		"name": "Mythril Knife (II)",
+		"id": 21001002,
+	},
+	{
+		"name": "Diamond Knuckle (VII)",
+		"id": 21007007,
+	},
+	{
+		"name": "War Hammer (V)",
+		"id": 21005003,
+	},
+	{
+		"name": "Mythril Clip (VII)",
+		"id": 21031002,
+	},
+	{
+		"name": "Protect Ring (VII)",
+		"id": 23080012,
+	},
+	{
+		"name": "Luminous Robe (V)",
+		"id": 22055007,
+	},
+	{
+		"name": "Rune Axe (V)",
+		"id": 21004007,
+	},
+	{
+		"name": "Lilith Rod (IV)",
+		"id": 21008011,
+	},
+	{
+		"name": "Golden Helm (VI)",
+		"id": 22052011,
+	},
+	{
+		"name": "Sledgehammer (XII)",
+		"id": 21005005,
+	},
+	{
+		"name": "Diamond Armor (VI)",
+		"id": 22054016,
+	},
+	{
+		"name": "Dragon Helm (III)",
+		"id": 22052008,
+	},
+	{
+		"name": "Silver Barrette (VII)",
+		"id": 21031003,
+	},
+	{
+		"name": "Dark Bow (V)",
+		"id": 21010007,
+	},
+	{
+		"name": "Demon Mail (III)",
+		"id": 22054009,
+	},
+	{
+		"name": "Light Staff (III)",
+		"id": 21009017,
+	},
+	{
+		"name": "Feathered Hat (III)",
+		"id": 22051018,
+	},
+	{
+		"name": "Longbow (XII)",
+		"id": 21010003,
+	},
+	{
+		"name": "Diamond Helm (III)",
+		"id": 22052017,
+	},
+	{
+		"name": "Flame Rod (V)",
+		"id": 21008005,
+	},
+	{
+		"name": "Mythril Vest (VI)",
+		"id": 22054017,
+	},
+	{
+		"name": "Blitz Sword (VIII)",
+		"id": 21002042,
+	},
+	{
+		"name": "Crystal Bangle (VII)",
+		"id": 22056007,
+	},
+	{
+		"name": "Silver Bangle (XIII)",
+		"id": 22056014,
+	},
+	{
+		"name": "Gaia Rod (XII)",
+		"id": 21008007,
+	},
+	{
+		"name": "Shell Shield (XII)",
+		"id": 22050009,
+	},
+	{
+		"name": "Crystal Helm (VI)",
+		"id": 22052015,
+	},
+	{
+		"name": "Crystal Armor (V)",
+		"id": 22054014,
+	},
+	{
+		"name": "Broadaxe (XII)",
+		"id": 21004003,
+	},
+	{
+		"name": "Scholar Robe (III)",
+		"id": 22055004,
+	},
+	{
+		"name": "Mythril Armor (IV)",
+		"id": 22054007,
+	},
+	{
+		"name": "Healing Rod (XII)",
+		"id": 21008004,
+	},
+	{
+		"name": "Light Rod (III)",
+		"id": 21008013,
+	},
+	{
+		"name": "Oaken Pole (XII)",
+		"id": 21009020,
+	},
+	{
+		"name": "Giant's Helm (II)",
+		"id": 22052006,
+	},
+	{
+		"name": "Iron Sword (XII)",
+		"id": 21002002,
+	},
+	{
+		"name": "Killer Bow (V)",
+		"id": 21010010,
+	},
+	{
+		"name": "Power Wrist (VII)",
+		"id": 23080001,
+	},
+	{
+		"name": "Circlet (V)",
+		"id": 22051008,
+	},
+	{
+		"name": "Gladius (IX)",
+		"id": 21001017,
+	},
+	{
+		"name": "Power Rod (XII)",
+		"id": 21008008,
+	},
+	{
+		"name": "Black Cowl (IV)",
+		"id": 22051015,
+	},
+	{
+		"name": "Flame Staff (XII)",
+		"id": 21009013,
+	},
+	{
+		"name": "Diamond Armor (IV)",
+		"id": 22054029,
+	},
+	{
+		"name": "Black Belt Gi (III)",
+		"id": 22053010,
+	},
+	{
+		"name": "Power Wrist (VII)",
+		"id": 23080001,
+	},
+	{
+		"name": "Titanium Bangle (XIII)",
+		"id": 22056031,
+	},
+	{
+		"name": "General's Belt (XIII)",
+		"id": 23080044,
+	},
+	{
+		"name": "Durable Power Wristband (XIII)",
+		"id": 23080023,
+	},
+	{
+		"name": "PSICOM Rifle (XIII)",
+		"id": 21015010,
+	},
+	{
+		"name": "Diamond Bangle (VII)",
+		"id": 22056006,
+	},
+	{
+		"name": "Champion Belt (VII)",
+		"id": 23080078,
+	},
+	{
+		"name": "Avenger (XII)",
+		"id": 21001011,
+	},
+	{
+		"name": "Madhura Harp (III)",
+		"id": 21011002,
+	},
+	{
+		"name": "Gaia Vest (III)",
+		"id": 22055015,
+	},
+	{
+		"name": "Flame Helm (II)",
+		"id": 22052005,
+	},
+	{
+		"name": "Whip (IV)",
+		"id": 21012001,
+	},
+	{
+		"name": "Greatsword (VI)",
+		"id": 21002007,
+	},
+	{
+		"name": "Mythril Rod (VII)",
+		"id": 21008021,
+	},
+	{
+		"name": "Fairy Ring (VII)",
+		"id": 23080031,
+	},
+	{
+		"name": "Peace Ring (VII)",
+		"id": 23080014,
+	},
+	{
+		"name": "Coral Sword (V)",
+		"id": 21002005,
+	},
+	{
+		"name": "Shuriken (III)",
+		"id": 21013004,
+	},
+	{
+		"name": "Ogrekiller (IV)",
+		"id": 21004005,
+	},
+	{
+		"name": "Silk Robe (IX)",
+		"id": 22055023,
+	},
+	{
+		"name": "Brigandine (IX)",
+		"id": 22053032,
+	},
+	{
+		"name": "Mage Staff (IX)",
+		"id": 21009032,
+	},
+	{
+		"name": "Earring (VII)",
+		"id": 23080002,
+	},
+	{
+		"name": "Power Belt (IX)",
+		"id": 23080041,
+	},
+	{
+		"name": "Pearl Rouge (IX)",
+		"id": 23080082,
+	},
+	{
+		"name": "Mythril Claw (VII)",
+		"id": 21007016,
+	},
+	{
+		"name": "Galbadian Bracers (VIII)",
+		"id": 22056023,
+	},
+	{
+		"name": "Ashura (IV)",
+		"id": 21003008,
+	},
+	{
+		"name": "Flail (VIII)",
+		"id": 21008044,
+	},
+	{
+		"name": "Giant's Ring (VIII)",
+		"id": 23080087,
+	},
+	{
+		"name": "Platinum Dagger (XII)",
+		"id": 21001016,
+	},
+	{
+		"name": "Golden Armor (II)",
+		"id": 22054031,
+	},
+	{
+		"name": "Defender (IV)",
+		"id": 21002020,
+	},
+	{
+		"name": "Poison Rod (VI)",
+		"id": 21008009,
+	},
+	{
+		"name": "Knight's Armor (I)",
+		"id": 22054021,
+	},
+	{
+		"name": "Silver Armlet (VII)",
+		"id": 22056005,
+	},
+	{
+		"name": "Gold Hairpin (V)",
+		"id": 22051006,
+	},
+	{
+		"name": "Adamant Vest (IX)",
+		"id": 22053040,
+	},
+	{
+		"name": "Elven Bow (V)",
+		"id": 21010008,
+	},
+	{
+		"name": "Poison Axe (IV)",
+		"id": 21004008,
+	},
+	{
+		"name": "One-Winged Angel (VII)",
+		"id": 21003022,
+	},
+	{
+		"name": "Trident (XII)",
+		"id": 21006010,
+	},
+	{
+		"name": "Dancing Dagger (IV)",
+		"id": 21001029,
+	},
+	{
+		"name": "Wizard Armlet (X)",
+		"id": 22056012,
+	},
+	{
+		"name": "Rune Blade (V)",
+		"id": 21002008,
+	},
+	{
+		"name": "Icebrand (IV)",
+		"id": 21002019,
+	},
+	{
+		"name": "Orichalcum Dirk (V)",
+		"id": 21001009,
+	},
+	{
+		"name": "Sage's Surplice (IV)",
+		"id": 22055011,
+	},
+	{
+		"name": "Power Glove (XIII)",
+		"id": 21007019,
+	},
+	{
+		"name": "Behemoth Knife",
+		"id": 21001033,
+	},
+	{
+		"name": "Warrior's Sword (X)",
+		"id": 21002040,
+	},
+	{
+		"name": "Air Knife (VI)",
+		"id": 21001014,
+	},
+	{
+		"name": "Defense Veil (X)",
+		"id": 22051045,
+	},
+	{
+		"name": "Blitz Whip (IV)",
+		"id": 21012002,
+	},
+	{
+		"name": "Sage's Staff (IV)",
+		"id": 21009018,
+	},
+	{
+		"name": "Rune Armlet (VII)",
+		"id": 22056008,
+	},
+	{
+		"name": "Thornlet (V)",
+		"id": 22052014,
+	},
+	{
+		"name": "Mythril Knife (II)",
+		"id": 21001002,
+	},
+	{
+		"name": "Black Cowl (IV)",
+		"id": 22051015,
+	},
+	{
+		"name": "Earring (VII)",
+		"id": 23080002,
+	},
+	{
+		"name": "Mythril Staff (IV)",
+		"id": 21009005,
+	},
+	{
+		"name": "Sage's Surplice (IV)",
+		"id": 22055011,
+	},
+	{
+		"name": "Mythril Armor (IV)",
+		"id": 22054007,
+	},
+	{
+		"name": "Sage's Surplice (IV)",
+		"id": 22055011,
+	},
+	{
+		"name": "Sage's Surplice (IV)",
+		"id": 22055011,
+	},
+	{
+		"name": "Mythril Staff (IV)",
+		"id": 21009005,
+	},
+	{
+		"name": "Mythril Armor (IV)",
+		"id": 22054007,
+	},
+	{
+		"name": "Hairband (VI)",
+		"id": 22051004,
+	}
+	{
+		"name": "Dark Orb",
+		"id": 40000063
+	},
+	{
+		"name": "Earth Orb",
+		"id": 40000048
+	},
+	{
+		"name": "Major Non-Elemental Orb",
+		"id": 40000030
+	},
+	{
+		"name": "Greater Earth Orb",
+		"id": 40000049
+	},
+	{
+		"name": "Greater Power Orb",
+		"id": 40000004
+	},
+	{
+		"name": "Minor Blue Orb",
+		"id": 40000016
+	},
+	{
+		"name": "Major Dark Orb",
+		"id": 40000065
+	},
+	{
+		"name": "Major Earth Orb",
+		"id": 40000050
+	},
+	{
+		"name": "Greater White Orb",
+		"id": 40000009
+	},
+	{
+		"name": "Greater Holy Orb",
+		"id": 40000059
+	},
+	{
+		"name": "Lesser Non-Elemental Orb",
+		"id": 40000027
+	},
+	{
+		"name": "Greater Lightning Orb",
+		"id": 40000044
+	},
+	{
+		"name": "Minor Dark Orb",
+		"id": 40000061
+	},
+	{
+		"name": "Greater Ice Orb",
+		"id": 40000039
+	},
+	{
+		"name": "Greater Blue Orb",
+		"id": 40000019
+	},
+	{
+		"name": "Lesser Power Orb",
+		"id": 40000002
+	},
+	{
+		"name": "Holy Orb",
+		"id": 40000058
+	},
+	{
+		"name": "Lesser Holy Orb",
+		"id": 40000057
+	},
+	{
+		"name": "Minor Lightning Orb",
+		"id": 40000041
+	},
+	{
+		"name": "Minor Ice Orb",
+		"id": 40000036
+	},
+	{
+		"name": "Minor Black Orb",
+		"id": 40000011
+	},
+	{
+		"name": "Lesser Summon Orb",
+		"id": 40000022
+	},
+	{
+		"name": "Lesser Black Orb",
+		"id": 40000012
+	},
+	{
+		"name": "Greater Black Orb",
+		"id": 40000014
+	},
+	{
+		"name": "Lesser White Orb",
+		"id": 40000007
+	},
+	{
+		"name": "Black Orb",
+		"id": 40000013
+	},
+	{
+		"name": "Major Ice Orb",
+		"id": 40000040
+	},
+	{
+		"name": "Major Fire Orb",
+		"id": 40000035
+	},
+	{
+		"name": "Fire Orb",
+		"id": 40000033
+	},
+	{
+		"name": "Greater Wind Orb",
+		"id": 40000054
+	},
+	{
+		"name": "Summon Orb",
+		"id": 40000023
+	},
+	{
+		"name": "Major Holy Orb",
+		"id": 40000060
+	},
+	{
+		"name": "Lightning Orb",
+		"id": 40000043
+	},
+	{
+		"name": "Lesser Dark Orb",
+		"id": 40000062
+	},
+	{
+		"name": "Major Blue Orb",
+		"id": 40000020
+	},
+	{
+		"name": "Minor Fire Orb",
+		"id": 40000031
+	},
+	{
+		"name": "Lesser Earth Orb",
+		"id": 40000047
+	},
+	{
+		"name": "Greater Fire Orb",
+		"id": 40000034
+	},
+	{
+		"name": "Major Power Orb",
+		"id": 40000005
+	},
+	{
+		"name": "Wind Orb",
+		"id": 40000053
+	},
+	{
+		"name": "Lesser Wind Orb",
+		"id": 40000052
+	},
+	{
+		"name": "Lesser Ice Orb",
+		"id": 40000037
+	},
+	{
+		"name": "Major Wind Orb",
+		"id": 40000055
+	},
+	{
+		"name": "Greater Non-Elemental Orb",
+		"id": 40000029
+	},
+	{
+		"name": "Minor Summon Orb",
+		"id": 40000021
+	},
+	{
+		"name": "Minor Non-Elemental Orb",
+		"id": 40000026
+	},
+	{
+		"name": "Lesser Fire Orb",
+		"id": 40000032
+	},
+	{
+		"name": "Minor Wind Orb",
+		"id": 40000051
+	},
+	{
+		"name": "Power Orb",
+		"id": 40000003
+	},
+	{
+		"name": "Lesser Blue Orb",
+		"id": 40000017
+	},
+	{
+		"name": "Greater Dark Orb",
+		"id": 40000064
+	},
+	{
+		"name": "Lesser Lightning Orb",
+		"id": 40000042
+	},
+	{
+		"name": "White Orb",
+		"id": 40000008
+	},
+	{
+		"name": "Ice Orb",
+		"id": 40000038
+	},
+	{
+		"name": "Minor White Orb",
+		"id": 40000006
+	},
+	{
+		"name": "Minor Holy Orb",
+		"id": 40000056
+	},
+	{
+		"name": "Greater Summon Orb",
+		"id": 40000024
+	},
+	{
+		"name": "Major Lightning Orb",
+		"id": 40000045
+	},
+	{
+		"name": "Major White Orb",
+		"id": 40000010
+	},
+	{
+		"name": "Blue Orb",
+		"id": 40000018
+	},
+	{
+		"name": "Non-Elemental Orb",
+		"id": 40000028
+	},
+	{
+		"name": "Major Black Orb",
+		"id": 40000015
+	},
+	{
+		"name": "Minor Power Orb",
+		"id": 40000001
+	},
+	{
+		"name": "Major Summon Orb",
+		"id": 40000025
+	},
+	{
+		"name": "Minor Earth Orb",
+		"id": 40000046
+	}
+}
