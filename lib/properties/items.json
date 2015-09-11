@@ -389,8 +389,15 @@
   "23080087": "Giant's Ring (VIII)",
   "23080089": "Soft Bracer (X)",
   "23080090": "Power Vest (VIII)",
+  "24098001": "Minor Scarletite",
   "24098002": "Small Scarletite",
+  "24098003": "Scarletite",
+  "24098004": "Greater Scarletite",
+  "24098005": "Major Scarletite",
+  "24099001": "Minor Adamantite",
   "24099002": "Small Adamantite",
+  "24099003": "Adamantite",
+  "24099004": "Greater Adamantite",
   "40000001": "Minor Power Orb",
   "40000002": "Lesser Power Orb",
   "40000003": "Power Orb",
@@ -457,3 +464,4 @@
   "40000064": "Greater Dark Orb",
   "40000065": "Major Dark Orb"
 }
+
