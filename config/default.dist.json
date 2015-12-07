@@ -15,6 +15,7 @@
             "def": 9999,
             "matk": 9999,
             "mdef": 9999,
+            "mnd": 9999,
             "acc": 9999,
             "eva": 9999,
             "spd": 9999
@@ -33,6 +34,7 @@
                 "DOOM",
                 "BERSERKER",
                 "SAP"
+                "STAN"
             ]
         },
         "status": [
@@ -51,6 +53,7 @@
             "def": 1,
             "matk": 1,
             "mdef": 1,
+            "mnd": 1,
             "acc": 1,
             "eva": 1,
             "spd": 1
