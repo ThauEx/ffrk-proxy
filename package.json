@@ -7,7 +7,7 @@
     "start": "node bin/app.js"
   },
   "dependencies": {
-    "bluebird": "^2.9.27",
+    "bluebird": "^3.0.6",
     "cli-table": "^0.3.1",
     "node-forge": "^0.6.30"
   },
