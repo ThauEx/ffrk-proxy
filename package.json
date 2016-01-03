@@ -1,6 +1,6 @@
 {
   "name": "ffrk-proxy",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "private": true,
   "start": "node bin/app.js",
   "scripts": {
@@ -10,6 +10,13 @@
     "bluebird": "^3.0.6",
     "cli-table": "^0.3.1",
     "node-forge": "^0.6.30"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/ThauEx/ffrk-proxy.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/ThauEx/ffrk-proxy/issues"
   },
   "license": "LGPL-3.0"
 }
