@@ -9,8 +9,8 @@ var info = require(__dirname + '/../package.json');
 var certStore = {
   rootCaCert: fs.readFileSync(__dirname + '/../cert/root/rootCA.crt', 'utf8'),
   rootCaKey: fs.readFileSync(__dirname + '/../cert/root/rootCA.key', 'utf8'),
-  defaultCaCert: fs.readFileSync(__dirname + '/../cert/test.crt', 'utf8'),
-  defaultCaKey: fs.readFileSync(__dirname + '/../cert/test.key', 'utf8')
+  defaultCaCert: fs.readFileSync(__dirname + '/../cert/wwe.crt', 'utf8'),
+  defaultCaKey: fs.readFileSync(__dirname + '/../cert/wwe.key', 'utf8')
 };
 
 var proxy = new FFRKProxy(certStore);
