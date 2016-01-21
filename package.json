@@ -9,6 +9,8 @@
   "dependencies": {
     "bluebird": "^3.0.6",
     "cli-table": "^0.3.1",
+    "convict": "^1.0.2",
+    "js-yaml": "^3.5.2",
     "node-forge": "^0.6.30"
   },
   "repository" : {
