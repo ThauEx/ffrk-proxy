@@ -18,9 +18,14 @@ var certStore = {
 
 var proxy = new FFRKProxy(certStore);
 
-proxy.listen(config.application.proxy.port, config.application.proxy.ip, function(err) {
+var proxyIp = config.get('application.proxy.ip');
+var proxyPort = config.get('application.proxy.port');
+var certIp = config.get('application.cert.ip');
+var certPort = config.get('application.cert.port');
+
+proxy.listen(proxyPort, proxyIp, function(err) {
   console.log('ffrk-proxy ' + info.version + ' started');
-  console.log('listening on: ' + config.application.proxy.ip + ':' + config.application.proxy.port);
+  console.log('listening on: ' + proxyIp + ':' + proxyPort);
 
   if (err) {
     console.log(err, err.stack.split('\n'));
@@ -47,9 +52,9 @@ http.createServer(function(request, response) {
   var readStream = fs.createReadStream(filePath);
 
   readStream.pipe(response);
-}).listen(config.application.cert.port, config.application.cert.ip, function(err) {
+}).listen(certPort, certIp, function(err) {
   console.log('rootCA webserver started');
-  console.log('listening on:' + config.application.cert.ip + ':' + config.application.cert.port);
+  console.log('listening on:' + certIp + ':' + certPort);
 
   if (err) {
     console.log(err, err.stack.split('\n'));
