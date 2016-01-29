@@ -2,12 +2,11 @@ var fs = require('fs');
 var http = require('http');
 
 var config = require(__dirname + '/../lib/config.js');
-GLOBAL.config = config;
 
 var FFRKProxy = require(__dirname + '/../lib/ffrk-proxy.js');
-var buddyFilter = require(__dirname + "/../lib/filter/buddy.js");
-var enemyFilter = require(__dirname + "/../lib/filter/enemy.js");
-var supporterFilter = require(__dirname + "/../lib/filter/supporter.js")
+var buddyFilter = require(__dirname + '/../lib/filter/buddy.js');
+var enemyFilter = require(__dirname + '/../lib/filter/enemy.js');
+var supporterFilter = require(__dirname + '/../lib/filter/supporter.js')
 var info = require(__dirname + '/../package.json');
 
 var certStore = {
@@ -46,7 +45,7 @@ http.createServer(function(request, response) {
   var stat = fs.statSync(filePath);
 
   response.writeHead(200, {
-    'Content-Type': "application/x-x509-ca-cert",
+    'Content-Type': 'application/x-x509-ca-cert',
     'Content-Disposition': 'attachment; filename="rootCa.pem";',
     'Content-Length': stat.size
   });
