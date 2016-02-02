@@ -4,7 +4,7 @@ var http = require('http');
 var FFRKProxy = require(__dirname + '/../lib/ffrk-proxy.js');
 var buddyFilter = require(__dirname + "/../lib/filter/buddy.js");
 var enemyFilter = require(__dirname + "/../lib/filter/enemy.js");
-var supporterFilter = require(_dirname + "/../lib/filter/supporter.js")
+var supporterFilter = require(__dirname + "/../lib/filter/supporter.js")
 var info = require(__dirname + '/../package.json');
 
 var certStore = {
