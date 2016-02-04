@@ -47,7 +47,7 @@ http.createServer(function(request, response) {
   response.writeHead(200, {
     'Content-Type': 'application/x-x509-ca-cert',
     'Content-Disposition': 'attachment; filename="rootCa.pem";',
-    'Content-Length': stat.size
+    'Content-Length': stat.size,
   });
 
   var readStream = fs.createReadStream(filePath);
