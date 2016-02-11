@@ -55,7 +55,7 @@ http.createServer(function(request, response) {
   readStream.pipe(response);
 }).listen(certPort, certIp, function(err) {
   console.log('rootCA webserver started');
-  console.log('listening on:' + certIp + ':' + certPort);
+  console.log('listening on: ' + certIp + ':' + certPort);
 
   if (err) {
     console.log(err, err.stack.split('\n'));
