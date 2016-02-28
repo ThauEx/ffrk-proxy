@@ -463,6 +463,11 @@
   "40000062": "Lesser Dark Orb",
   "40000063": "Dark Orb",
   "40000064": "Greater Dark Orb",
-  "40000065": "Major Dark Orb"
+  "40000065": "Major Dark Orb",
+  "70000001": "Minor Growth Egg",
+  "70000002": "Lesser Growth Egg",
+  "70000003": "Growth Egg",
+  "70000004": "Greater Growth Egg",
+  "70000005": "Major Growth Egg"
 }
 
