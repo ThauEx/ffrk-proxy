@@ -1,0 +1,10 @@
+supporter:
+    stats:
+        atk: 0
+        def: 0
+        matk: 0
+        mdef: 0
+        mnd: 0
+        acc: 0
+        eva: 0
+        spd: 0
