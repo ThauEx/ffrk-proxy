@@ -39,6 +39,10 @@
     "id": 108,
     "description": "Poison Element"
   },
+  "NONELE": {
+    "id": 199,
+    "description": "Non-Elemental Element"
+  },
   "POISON": {
     "id": 200,
     "description": "Poison (Lose (MaxHP / 64) every 5 sec)"
