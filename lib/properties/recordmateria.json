@@ -32,10 +32,10 @@
       "target_method": "6",
       "active_target_method": "2",
       "status_ailments_factor": "0",
-      "arg5": "0",
+      "arg5": "199",
       "ability_animation_id": "0"
     },
-    "exercise_type": "1",
+    "exercise_type": "7",
     "action_id": "3",
     "ability_id": "30151011"
   }
