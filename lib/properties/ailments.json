@@ -3,6 +3,46 @@
     "id": 0,
     "description": "null"
   },
+  "FIRE": {
+    "id": 100,
+    "description": "Fire Element"
+  },
+  "ICE": {
+    "id": 101,
+    "description": "Ice Element"
+  },
+  "THUNDER": {
+    "id": 102,
+    "description": "Thunder Element"
+  },
+  "EARTH": {
+    "id": 103,
+    "description": "Earth Element"
+  },
+  "WIND": {
+    "id": 104,
+    "description": "Wind Element"
+  },
+  "WATER": {
+    "id": 105,
+    "description": "Water Element"
+  },
+  "HOLY": {
+    "id": 106,
+    "description": "Holy Element"
+  },
+  "DARK": {
+    "id": 107,
+    "description": "Dark Element"
+  },
+  "BIO": {
+    "id": 108,
+    "description": "Poison Element"
+  },
+  "NONELE": {
+    "id": 199,
+    "description": "Non-Elemental Element"
+  },
   "POISON": {
     "id": 200,
     "description": "Poison (Lose (MaxHP / 64) every 5 sec)"
