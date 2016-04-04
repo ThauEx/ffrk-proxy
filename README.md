@@ -9,7 +9,7 @@ To start the proxy, just run `start.bat` and when your firewall is asking, pleas
 Install Nodejs first via package manager.
 Just type npm start to run it, all modules are already included, so please do not update them!
 
-### Configuration
+### Device configuration
 I think you all know how to configure a proxy server on your phone/tablet.
 For Android:
 > Proxy: Manual
@@ -23,9 +23,12 @@ For Android:
 To install the root certificate, open `ComputerIP:5051` in your phones webbrowser and accept the certificate installation. Your system could request you to set a security pattern (pin, password, etc), you have to do this.
 You have to install the certificate, it won't work without it.
 
-#### Known bugs:
-At least on Linux, you have to restart the game, when you try to enter a dungeon with not enough stamina. I will have a closer look on it, when I have some time...
-When reporting bugs, please tell me your server operating system+version and your android device+version.
+### Proxy configuration
+By default the proxy is looking for the file `default.yml` inside the `config` folder. There are some example files, which can be renamed to `default.yml`, to use them.
+All available values can be found in `lib/config.js`.
+For some of the basic settings, it is possible to pass them as command line arguments, e.g. `node bin/app.js --port 6050`.
+To load a different config file, use `node bin/app.js --config myconfig`, where `myconfig` is the file `config/myconfig.yml`.
+
 
 ### Requirements:
 * Nodejs >= 0.12
