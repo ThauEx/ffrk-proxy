@@ -1,0 +1,402 @@
+{
+  "null": {
+    "id": 0,
+    "description": "null"
+  },
+  "FIRE": {
+    "id": 100,
+    "description": "Fire Element"
+  },
+  "ICE": {
+    "id": 101,
+    "description": "Ice Element"
+  },
+  "THUNDER": {
+    "id": 102,
+    "description": "Thunder Element"
+  },
+  "EARTH": {
+    "id": 103,
+    "description": "Earth Element"
+  },
+  "WIND": {
+    "id": 104,
+    "description": "Wind Element"
+  },
+  "WATER": {
+    "id": 105,
+    "description": "Water Element"
+  },
+  "HOLY": {
+    "id": 106,
+    "description": "Holy Element"
+  },
+  "DARK": {
+    "id": 107,
+    "description": "Dark Element"
+  },
+  "BIO": {
+    "id": 108,
+    "description": "Poison Element"
+  },
+  "NONELE": {
+    "id": 199,
+    "description": "Non-Elemental Element"
+  },
+  "POISON": {
+    "id": 200,
+    "description": "Poison (Lose (MaxHP / 64) every 5 sec)"
+  },
+  "SILENCE": {
+    "id": 201,
+    "description": "Silence (Can't use ability types Wht, Blk, Blue, Summon)"
+  },
+  "PARALYSIS": {
+    "id": 202,
+    "description": "Paralyze (Can't do anything)"
+  },
+  "CONFUSION": {
+    "id": 203,
+    "description": "Confuse (Randomly attack anyone)"
+  },
+  "HASTE": {
+    "id": 204,
+    "description": "Haste (Turn wait (Yellow ATB bar) is 2x shorter)"
+  },
+  "SLOW": {
+    "id": 205,
+    "description": "Slow (Turn wait (Yellow ATB bar) is 2x longer)"
+  },
+  "STOP": {
+    "id": 206,
+    "description": "Stop (Can't do anything)"
+  },
+  "PROTECT": {
+    "id": 207,
+    "description": "Protect (DEF: 2x)"
+  },
+  "SHELL": {
+    "id": 208,
+    "description": "Shell (RES: 2x)"
+  },
+  "REFLECTION": {
+    "id": 209,
+    "description": "Reflection (Reflect 1-target Blk, Wht magic to enemy)"
+  },
+  "BLINDED": {
+    "id": 210,
+    "description": "Blinded (ACC 0.5x. Hit rate: 0.25x)"
+  },
+  "SLEEP": {
+    "id": 211,
+    "description": "Sleep (Can't do anything)"
+  },
+  "PETRIFACTION": {
+    "id": 212,
+    "description": "Petrification (Basically dead)"
+  },
+  "DOOM": {
+    "id": 213,
+    "description": "Doom (Countdown to KO)"
+  },
+  "INSTANT_DEATH": {
+    "id": 214,
+    "description": "Death"
+  },
+  "BERSERKER": {
+    "id": 215,
+    "description": "Berserker (ATK: 1.25x. Randomly attack foes)"
+  },
+  "REGEN": {
+    "id": 216,
+    "description": "Regen (Gain 3% MaxHP every 3 sec)"
+  },
+  "RERAISE": {
+    "id": 217,
+    "description": "Reraise"
+  },
+  "LEVITATE": {
+    "id": 218,
+    "description": "Levitate"
+  },
+  "WEAKENED": {
+    "id": 219,
+    "description": "Weakened"
+  },
+  "ZOMBIE": {
+    "id": 220,
+    "description": "Zombie"
+  },
+  "MINIMUM": {
+    "id": 221,
+    "description": "Minimum"
+  },
+  "TOAD": {
+    "id": 222,
+    "description": "Toad"
+  },
+  "CURSE": {
+    "id": 223,
+    "description": "Curse"
+  },
+  "GRADUAL_PETRIFACTION": {
+    "id": 224,
+    "description": "Gradual petrifaction"
+  },
+  "BLINK": {
+    "id": 225,
+    "description": "Blink"
+  },
+  "WATER_IMP": {
+    "id": 226,
+    "description": "Water imp"
+  },
+  "VANISH": {
+    "id": 227,
+    "description": "VANISH"
+  },
+  "PORKY": {
+    "id": 228,
+    "description": "PORKY"
+  },
+  "SAP": {
+    "id": 229,
+    "description": "Sap (Lose (MaxHP / 64) every 2 sec)"
+  },
+  "PYRAMID": {
+    "id": 231,
+    "description": "Pyramid"
+  },
+  "PRISON_CAGE": {
+    "id": 232,
+    "description": "Prison_cage"
+  },
+  "WATER_BALL": {
+    "id": 233,
+    "description": "Water ball"
+  },
+  "POSSESSION": {
+    "id": 234,
+    "description": "Possession"
+  },
+  "STOCK_BREAK": {
+    "id": 235,
+    "description": "Stock break"
+  },
+  "DOOM_30": {
+    "id": 236,
+    "description": "Doom 30"
+  },
+  "DOOM_45": {
+    "id": 237,
+    "description": "Doom 45"
+  },
+  "DOOM_90": {
+    "id": 238,
+    "description": "Doom 90"
+  },
+  "DOOM_120": {
+    "id": 239,
+    "description": "Doom 120"
+  },
+  "TRIPLE": {
+    "id": 240,
+    "description": "Triple / Matk+25%"
+  },
+  "SWALLOWED": {
+    "id": 241,
+    "description": "Swallowed"
+  },
+  "STAN": {
+    "id": 242,
+    "description": "Stan"
+  },
+  "REGEN_STRONG": {
+    "id": 243,
+    "description": "Regen strong"
+  },
+  "MATK_BOOSTER": {
+    "id": 501,
+    "description": "Matk Booster / Matk+25%"
+  },
+  "PROVOKE": {
+    "id": 502,
+    "description": "Provoke + Sentinel (Pala Cecil) / Def+200%"
+  },
+  "CHARGE": {
+    "id": 503,
+    "description": "Charge / Atk+200%"
+  },
+  "MIGHTY_STRIKE": {
+    "id": 504,
+    "description": "Mighty strike"
+  },
+  "INVISIBLE": {
+    "id": 505,
+    "description": "Invisible"
+  },
+  "DEFENSE": {
+    "id": 506,
+    "description": "Defense"
+  },
+  "DISABLE": {
+    "id": 507,
+    "description": "Disable"
+  },
+  "COUNTER_AIMING": {
+    "id": 508,
+    "description": "Retaliate"
+  },
+  "RUNIC": {
+    "id": 509,
+    "description": "Runic (Celes)"
+  },
+  "AIRFORCE_SPECK": {
+    "id": 510,
+    "description": "Airforce speck"
+  },
+  "FORCE_ESCAPE": {
+    "id": 511,
+    "description": "Force escape"
+  },
+  "BASIC_MAGIC_BREAKER": {
+    "id": 512,
+    "description": "Basic magic breaker"
+  },
+  "RAID": {
+    "id": 513,
+    "description": "Raid (Luneth) / Atk+150%, Def-50%"
+  },
+  "LOCK_ON": {
+    "id": 514,
+    "description": "Lock on"
+  },
+  "OVER_DRIVE": {
+    "id": 515,
+    "description": "Overdrive / Atk+30%, DefMdef-30%"
+  },
+  "ROAR": {
+    "id": 516,
+    "description": "Roar / AtkMatk+20%, DefMdef-20%"
+  },
+  "MAGIC_SEAL": {
+    "id": 517,
+    "description": "Magic seal"
+  },
+  "MIRAGE_1": {
+    "id": 518,
+    "description": "Mirage 1"
+  },
+  "MIRAGE_2": {
+    "id": 519,
+    "description": "Mirage 2"
+  },
+  "MIRAGE_3": {
+    "id": 520,
+    "description": "Mirage 3"
+  },
+  "NON_DAMAGE": {
+    "id": 521,
+    "description": "Non damage"
+  },
+  "CHARM": {
+    "id": 522,
+    "description": "Charm:Taunt (Knight) / Def+100%"
+  },
+  "MIGHTY_GUARD_1": {
+    "id": 523,
+    "description": "Mighty guard 1"
+  },
+  "SUCTION": {
+    "id": 524,
+    "description": "Suction"
+  },
+  "FURY": {
+    "id": 525,
+    "description": "Fury"
+  },
+  "INDOMITABLENESS": {
+    "id": 526,
+    "description": "Indomitableness / Atk+50%"
+  },
+  "MAGIC_CHARM": {
+    "id": 527,
+    "description": "Magic Charm:Magical Taunt (Knight) / MDef+100%"
+  },
+  "Concentration": {
+    "id": 528,
+    "description": "Concentration (Lulu) / Matk+20%, Mdef+50%"
+  },
+  "CUSTOM_MATK": {
+    "id": 601,
+    "description": "(Matk) Magic Break + Focus Magic"
+  },
+  "CUSTOM_MND": {
+    "id": 602,
+    "description": "(Mnd) Goddesses' Mark (?)"
+  },
+  "CUSTOM_ATK": {
+    "id": 603,
+    "description": "(Atk) Power Break + Boost"
+  },
+  "CUSTOM_DEF": {
+    "id": 604,
+    "description": "(Def) Armor Break"
+  },
+  "CUSTOM_ATK_ACC": {
+    "id": 605,
+    "description": "(Atk+Acc) Martial Arts (Refia)"
+  },
+  "CUSTOM_EVA": {
+    "id": 606,
+    "description": "Custom eva"
+  },
+  "CUSTOM_MDEF": {
+    "id": 607,
+    "description": "(Mdef) Mental Break"
+  },
+  "CUSTOM_DEF_MDEF": {
+    "id": 608,
+    "description": "(Def+Mdef) Sentinel Grimoire; Status Reels"
+  },
+  "CUSTOM_ATK_MATK_DEF_MDEF": {
+    "id": 609,
+    "description": "(Atk+Def+Matk+Mdef) Full Break + High Potential (Gordon)"
+  },
+  "CUSTOM_ATK_MATK": {
+    "id": 610,
+    "description": "(Atk+Matk) Legendary Harmony"
+  },
+  "CUSTOM_ATK_DEF": {
+    "id": 611,
+    "description": "(Atk+Def) Emperor's Vessel (Leonheart),"
+  },
+  "INVINCIBLE": {
+    "id": 701,
+    "description": "Invincible"
+  },
+  "NULL_PHYSICAL": {
+    "id": 702,
+    "description": "Null physical"
+  },
+  "NULL_MAGIC": {
+    "id": 703,
+    "description": "Null magic"
+  },
+  "FARAWAY": {
+    "id": 704,
+    "description": "Faraway"
+  },
+  "NULL_BASIC_MAGIC": {
+    "id": 705,
+    "description": "Null basic magic"
+  },
+  "IGNORE_INCONTROLLABLE": {
+    "id": 901,
+    "description": "Ignore incontrollable"
+  },
+  "DEATH": {
+    "id": 999,
+    "description": "Death"
+  }
+}

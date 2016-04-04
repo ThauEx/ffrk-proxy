@@ -1,0 +1,42 @@
+{
+  "ZEALOT": [{
+    "arg2": "30151011",
+    "effect_type": "13",
+    "arg1": "100",
+    "arg4": "0",
+    "arg3": "0",
+    "arg5": "0",
+    "slot": 1
+  }],
+  "ZEALOTATK": {
+    "category_id": "5",
+    "options": {
+      "alias_name": "",
+      "panel_name": "Attack",
+      "arg4": "0",
+      "target_segment": "1",
+      "arg7": "0",
+      "status_ailments_id": "0",
+      "arg9": "0",
+      "counter_enable": "1",
+      "arg1": "100",
+      "arg10": "0",
+      "target_range": "2",
+      "target_death": "1",
+      "name": "Attack",
+      "arg3": "0",
+      "cast_time": "1500",
+      "arg8": "0",
+      "arg6": "0",
+      "arg2": "1",
+      "target_method": "6",
+      "active_target_method": "2",
+      "status_ailments_factor": "0",
+      "arg5": "199",
+      "ability_animation_id": "0"
+    },
+    "exercise_type": "1",
+    "action_id": "7",
+    "ability_id": "30151011"
+  }
+}

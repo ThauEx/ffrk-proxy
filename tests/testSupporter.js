@@ -1,5 +1,5 @@
 var fs = require('fs');
-var buddyFilter = require(__dirname + '/../lib/filter/buddy.js');
+var supporterFilter = require(__dirname + '/../lib/filter/supporter.js');
 
 var json = fs.readFileSync(__dirname + "/get_battle_init_data-morphing_boss.json").toString();
 try {
@@ -7,6 +7,6 @@ try {
 } catch (e) {
   json = new Function('return ' + json)();
 }
-json = json.battle.buddy;
+json = json.battle.supporter;
 
-buddyFilter.update(json);
+supporterFilter.update(json);
