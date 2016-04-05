@@ -13,12 +13,15 @@
     "js-yaml": "^3.5.2",
     "node-forge": "^0.6.30"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/ThauEx/ffrk-proxy.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThauEx/ffrk-proxy.git"
   },
   "bugs": {
-    "url" : "https://github.com/ThauEx/ffrk-proxy/issues"
+    "url": "https://github.com/ThauEx/ffrk-proxy/issues"
   },
-  "license": "LGPL-3.0"
+  "license": "LGPL-3.0",
+  "devDependencies": {
+    "jscs": "^2.11.0"
+  }
 }
