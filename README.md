@@ -29,6 +29,111 @@ All available values can be found in `lib/config.js`.
 For some of the basic settings, it is possible to pass them as command line arguments, e.g. `node bin/app.js --port 6050`.
 To load a different config file, use `node bin/app.js --config myconfig`, where `myconfig` is the file `config/myconfig.yml`.
 
+Available config keys:
+```
+  application:
+    properties:
+      config:
+        format: string
+      proxy:
+        properties:
+          ip: {}
+          port: {}
+          whitelist:
+            format: boolean
+          domains:
+            format: object
+      cert:
+        properties:
+          ip: {}
+          port: {}
+      dump:
+        properties:
+          get_battle_init_data:
+            format: boolean
+  buddy:
+    properties:
+      stats:
+        properties:
+          atk:
+            format: number
+          def:
+            format: number
+          matk:
+            format: number
+          mdef:
+            format: number
+          mnd:
+            format: number
+          acc:
+            format: number
+          eva:
+            format: number
+          spd:
+            format: number
+      attack:
+        properties:
+          type: {}
+          attributes:
+            format: array
+          counterAbility:
+            format: boolean
+          hitAll:
+            format: boolean
+          elementType: {}
+          multiHit:
+            format: number
+          quickAttack:
+            format: boolean
+          abilitySpammer:
+            format: boolean
+          soulStrikeSpammer:
+            format: boolean
+      status:
+        format: array
+  enemy:
+    properties:
+      stats:
+        properties:
+          atk:
+            format: number
+          def:
+            format: number
+          matk:
+            format: number
+          mdef:
+            format: number
+          mnd:
+            format: number
+          acc:
+            format: number
+          eva:
+            format: number
+          spd:
+            format: number
+      defAttributes:
+        properties:
+          enabled:
+            format: boolean
+          attributes:
+            format: array
+  supporter:
+    properties:
+      stats:
+        properties:
+          atk:
+            format: number
+          matk:
+            format: number
+          mnd:
+            format: number
+          acc:
+            format: number
+      attack:
+        properties:
+          soulStrikeSpammer:
+            format: boolean
+```
 
 ### Requirements:
 * Nodejs >= 0.12
