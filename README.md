@@ -31,108 +31,95 @@ To load a different config file, use `node bin/app.js --config myconfig`, where 
 
 Available config keys:
 ```
-  application:
-    properties:
-      config:
-        format: string
-      proxy:
-        properties:
-          ip: {}
-          port: {}
-          whitelist:
-            format: boolean
-          domains:
-            format: object
-      cert:
-        properties:
-          ip: {}
-          port: {}
-      dump:
-        properties:
-          get_battle_init_data:
-            format: boolean
-  buddy:
-    properties:
-      stats:
-        properties:
-          atk:
-            format: number
-          def:
-            format: number
-          matk:
-            format: number
-          mdef:
-            format: number
-          mnd:
-            format: number
-          acc:
-            format: number
-          eva:
-            format: number
-          spd:
-            format: number
-      attack:
-        properties:
-          type: {}
-          attributes:
-            format: array
-          counterAbility:
-            format: boolean
-          hitAll:
-            format: boolean
-          elementType: {}
-          multiHit:
-            format: number
-          quickAttack:
-            format: boolean
-          abilitySpammer:
-            format: boolean
-          soulStrikeSpammer:
-            format: boolean
-      status:
-        format: array
-  enemy:
-    properties:
-      stats:
-        properties:
-          atk:
-            format: number
-          def:
-            format: number
-          matk:
-            format: number
-          mdef:
-            format: number
-          mnd:
-            format: number
-          acc:
-            format: number
-          eva:
-            format: number
-          spd:
-            format: number
-      defAttributes:
-        properties:
-          enabled:
-            format: boolean
-          attributes:
-            format: array
-  supporter:
-    properties:
-      stats:
-        properties:
-          atk:
-            format: number
-          matk:
-            format: number
-          mnd:
-            format: number
-          acc:
-            format: number
-      attack:
-        properties:
-          soulStrikeSpammer:
-            format: boolean
+application:
+  cert:
+    ip: {}
+    port: {}
+  config:
+    format: string
+  dump:
+    get_battle_init_data:
+      format: boolean
+  proxy:
+    domains:
+      format: object
+    ip: {}
+    port: {}
+    whitelist:
+      format: boolean
+buddy:
+  attack:
+    abilitySpammer:
+      format: boolean
+    attributes:
+      format: array
+    counterAbility:
+      format: boolean
+    elementType: {}
+    hitAll:
+      format: boolean
+    multiHit:
+      format: number
+    quickAttack:
+      format: boolean
+    soulStrikeSpammer:
+      format: boolean
+    type: {}
+  stats:
+    acc:
+      format: number
+    atk:
+      format: number
+    def:
+      format: number
+    eva:
+      format: number
+    matk:
+      format: number
+    mdef:
+      format: number
+    mnd:
+      format: number
+    spd:
+      format: number
+  status:
+    format: array
+enemy:
+  defAttributes:
+    attributes:
+      format: array
+    enabled:
+      format: boolean
+  stats:
+    acc:
+      format: number
+    atk:
+      format: number
+    def:
+      format: number
+    eva:
+      format: number
+    matk:
+      format: number
+    mdef:
+      format: number
+    mnd:
+      format: number
+    spd:
+      format: number
+supporter:
+  attack:
+    soulStrikeSpammer:
+      format: boolean
+  stats:
+    acc:
+      format: number
+    atk:
+      format: number
+    matk:
+      format: number
+    mnd:
+      format: number
 ```
 
 ### Requirements:
