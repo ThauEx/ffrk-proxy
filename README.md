@@ -6,8 +6,8 @@ Go to the release page and download one of the windows releases (x86 or x64).
 To start the proxy, just run `start.bat` and when your firewall is asking, please allow the access. Nodejs has to open a port, where the server is running.
 
 **On Linux and Mac**:
-Install Nodejs first via package manager.
-Just type npm start to run it, all modules are already included, so please do not update them!
+Install Nodejs first via package manager, then run `npm install`.
+To run it, just type `npm start`.
 
 ### Device configuration
 I think you all know how to configure a proxy server on your phone/tablet.
