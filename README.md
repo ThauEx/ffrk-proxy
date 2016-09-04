@@ -23,6 +23,9 @@ For Android:
 To install the root certificate, open `ComputerIP:5051` in your phones webbrowser and accept the certificate installation. Your system could request you to set a security pattern (pin, password, etc), you have to do this.
 You have to install the certificate, it won't work without it.
 
+### Important information for ProxyDroid user
+In order to use ProxyDroid, you have to disable the whitelist feature, to do that, rename or copy the file `default.no-whitelist.example.yml` to `default.yml` inside the config folder.
+
 ### Proxy configuration
 By default the proxy is looking for the file `default.yml` inside the `config` folder. There are some example files, which can be renamed to `default.yml`, to use them.
 All available values can be found in `lib/config.js`.
