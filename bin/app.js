@@ -7,6 +7,7 @@ var FFRKProxy = require(__dirname + '/../lib/ffrk-proxy.js');
 var buddyFilter = require(__dirname + '/../lib/filter/buddy.js');
 var enemyFilter = require(__dirname + '/../lib/filter/enemy.js');
 var supporterFilter = require(__dirname + '/../lib/filter/supporter.js')
+var roundsFilter = require(__dirname + '/../lib/filter/rounds.js');
 var info = require(__dirname + '/../package.json');
 
 var certStore = {
@@ -37,6 +38,10 @@ proxy.on('battleInitData', function(json, callback) {
   json.battle.buddy = buddyFilter.update(json.battle.buddy);
   json.battle.rounds = enemyFilter.update(json.battle.rounds);
   json.battle.supporter = supporterFilter.update(json.battle.supporter);
+
+  if (config.get('rounds.shortRounds.enabled')) {
+    json.battle.rounds = roundsFilter.update(json.battle.rounds);
+  }
   callback(json);
 });
 
