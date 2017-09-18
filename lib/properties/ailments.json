@@ -215,6 +215,18 @@
     "id": 243,
     "description": "Regen strong"
   },
+  "GUTS_1": {
+    "id": 261,
+    "description": "Last Stand"
+  },
+  "STATUS_AILMENTS_BARRIER": {
+    "id": 271,
+    "description": "ASTRA"
+  },
+  "BUSTER_SWORD_MODE": {
+    "id": 276,
+    "description": "EX: Soldier"
+  },
   "MATK_BOOSTER": {
     "id": 501,
     "description": "Matk Booster / Matk+25%"
