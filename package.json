@@ -11,7 +11,8 @@
     "cli-table": "^0.3.1",
     "convict": "^1.4.0",
     "js-yaml": "^3.6.1",
-    "node-forge": "^0.6.42"
+    "node-forge": "^0.6.42",
+    "request": ">=2.51.0"
   },
   "repository": {
     "type": "git",
