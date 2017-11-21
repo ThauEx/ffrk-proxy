@@ -101,7 +101,7 @@
   },
   "INSTANT_DEATH": {
     "id": 214,
-    "description": "Death"
+    "description": "Death (Set HP = 0)"
   },
   "BERSERKER": {
     "id": 215,
@@ -113,7 +113,7 @@
   },
   "RERAISE": {
     "id": 217,
-    "description": "Reraise"
+    "description": "Reraise (Removes KO, 80% HP)"
   },
   "LEVITATE": {
     "id": 218,
@@ -165,39 +165,39 @@
   },
   "PYRAMID": {
     "id": 231,
-    "description": "Pyramid"
+    "description": "Pyramid (Can't act, Phys Damage Resets)"
   },
   "PRISON_CAGE": {
     "id": 232,
-    "description": "Prison_cage"
+    "description": "Prison_cage (Arrests ATB charge rate, can't act)"
   },
   "WATER_BALL": {
     "id": 233,
-    "description": "Water ball"
+    "description": "Water ball (Lose (1/128 MaxHP) every second, can't act)"
   },
   "POSSESSION": {
     "id": 234,
-    "description": "Possession"
+    "description": "Possession (Affects Soul Fire's behaviour)"
   },
   "STOCK_BREAK": {
     "id": 235,
-    "description": "Stock break"
+    "description": "Stock break (No gameplay effects)"
   },
   "DOOM_30": {
     "id": 236,
-    "description": "Doom 30"
+    "description": "Doom 30 seconds"
   },
   "DOOM_45": {
     "id": 237,
-    "description": "Doom 45"
+    "description": "Doom 45 seconds"
   },
   "DOOM_90": {
     "id": 238,
-    "description": "Doom 90"
+    "description": "Doom 90 seconds"
   },
   "DOOM_120": {
     "id": 239,
-    "description": "Doom 120"
+    "description": "Doom 120 seconds"
   },
   "TRIPLE": {
     "id": 240,
@@ -205,15 +205,79 @@
   },
   "SWALLOWED": {
     "id": 241,
-    "description": "Swallowed"
+    "description": "Swallowed (Arrests ATB charge rate, can't act)"
   },
-  "STAN": {
+  "STUN": {
     "id": 242,
-    "description": "Stan"
+    "description": "Stun (Resets ATB)"
   },
   "REGEN_STRONG": {
     "id": 243,
-    "description": "Regen strong"
+    "description": "Regen strong (Heals 5% MaxHP every 2.5 seconds)"
+  },
+  "REFLECTION_FULL_TIME": {
+    "id": 245,
+    "description": "Perma-Reflect (Redirect single-target BLK and WHT attacks)"
+  },
+  "MAGICAL_MINE": {
+    "id": 246,
+    "description": "Glyph Mine (KO in 20 seconds, unless defending)"
+  },
+  "RERAISE_40": {
+    "id": 249,
+    "description": "Reraise (Removes KO, 40% HP)"
+  },
+  "RERAISE_60": {
+    "id": 250,
+    "description": "Reraise (Removes KO, 60% HP)"
+  },
+  "RERAISE_80": {
+    "id": 251,
+    "description": "Reraise (Removes KO, 80% HP)"
+  },
+  "RERAISE_100": {
+    "id": 252,
+    "description": "Reraise (Removes KO, 100% HP)"
+  },
+  "RADIANT_SHIELD": {
+    "id": 260,
+    "description": "Radiant Shield: 100% (Returns all the damage taken to the attacker)"
+  },
+  "GUTS_1": {
+    "id": 261,
+    "description": "Last Stand (Prevents KO, HP stops at 1% MaxHP)"
+  },
+  "THUNDER_GOD_MODE": {
+    "id": 268,
+    "description": "Thunder God's Might (Cast speed x3)"
+  },
+  "STATUS_AILMENTS_BARRIER": {
+    "id": 271,
+    "description": "ASTRA (Prevents Poison, Silence, Paralyze, Confuse, Slow, Stop, Blind, Sleep, Petrify, Berserk, Sap, Stun and Frozen once)"
+  },
+  "BUSTER_SWORD_MODE": {
+    "id": 276,
+    "description": "EX: Soldier (Increase damage 30%, break the damage cap)"
+  },
+  "TINA_TRANCE_MODE": {
+    "id": 277,
+    "description": "Terra Trance (ATK, DEF, MAG, RES, MND, ACC and EVA +20%, cast speed x2,00)"
+  },
+  "VAAN_SKY_PIRATES_MODE": {
+    "id": 286,
+    "description": "EX: Sky Pirate (Thief abilities: +30% damage, cast speed x9999999)"
+  },
+  "GUTS_1": {
+    "id": 261,
+    "description": "Last Stand"
+  },
+  "STATUS_AILMENTS_BARRIER": {
+    "id": 271,
+    "description": "ASTRA"
+  },
+  "BUSTER_SWORD_MODE": {
+    "id": 276,
+    "description": "EX: Soldier"
   },
   "MATK_BOOSTER": {
     "id": 501,
@@ -326,6 +390,10 @@
   "Concentration": {
     "id": 528,
     "description": "Concentration (Lulu) / Matk+20%, Mdef+50%"
+  },
+  "DEF_BOOST_FOR_PALADIN": {
+    "id": 579,
+    "description": "EX: Paladin (DEF +100%)"
   },
   "CUSTOM_MATK": {
     "id": 601,
