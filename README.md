@@ -123,6 +123,11 @@ supporter:
       format: number
     mnd:
       format: number
+magicite:
+    summon:
+        skillSpammer: boolean
+        duration: number
+        gaugeFillTime: number      
 ```
 
 ### Requirements:

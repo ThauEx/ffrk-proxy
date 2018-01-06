@@ -1,0 +1,5 @@
+magicite:
+    summon: 
+      skillSpammer: false
+      duration: 0
+      gaugeFillTime: 0
