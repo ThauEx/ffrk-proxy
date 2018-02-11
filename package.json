@@ -7,7 +7,9 @@
     "start": "node bin/app.js"
   },
   "dependencies": {
+    "address": "^1.0.3",
     "bluebird": "^3.4.6",
+    "chalk": "^2.3.0",
     "cli-table": "^0.3.1",
     "convict": "^1.4.0",
     "js-yaml": "^3.6.1",

@@ -1,3 +1,5 @@
+var address = require('address');
+var chalk = require('chalk');
 var fs = require('fs');
 var http = require('http');
 
@@ -25,9 +27,17 @@ var proxyPort = config.get('application.proxy.port');
 var certIp = config.get('application.cert.ip');
 var certPort = config.get('application.cert.port');
 
+if (proxyIp === '0.0.0.0') {
+  proxyIp = address.ip();
+}
+
+if (certIp === '0.0.0.0') {
+  certIp = address.ip();
+}
+
 proxy.listen(proxyPort, proxyIp, function(err) {
-  console.log('ffrk-proxy ' + info.version + ' started');
-  console.log('listening on: ' + proxyIp + ':' + proxyPort);
+  console.log(chalk.black.bgWhite.bold('ffrk-proxy') + chalk.black.bgWhite(' ' + info.version + ' started'));
+  console.log('listening on: ' + chalk.green(proxyIp + ':' + proxyPort));
 
   if (err) {
     console.log(err, err.stack.split('\n'));
@@ -61,8 +71,8 @@ http.createServer(function(request, response) {
 
   readStream.pipe(response);
 }).listen(certPort, certIp, function(err) {
-  console.log('rootCA webserver started');
-  console.log('listening on: ' + certIp + ':' + certPort);
+  console.log(chalk.black.bgWhite.bold('rootCA webserver') + chalk.black.bgWhite(' started'));
+  console.log('listening on: ' + chalk.green(certIp + ':' + certPort));
 
   if (err) {
     console.log(err, err.stack.split('\n'));
