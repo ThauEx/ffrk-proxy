@@ -71,8 +71,11 @@ http.createServer(function(request, response) {
 
   readStream.pipe(response);
 }).listen(certPort, certIp, function(err) {
+  var ipPort = certIp + ':' + certPort;
   console.log(chalk.black.bgWhite.bold('rootCA webserver') + chalk.black.bgWhite(' started'));
-  console.log('listening on: ' + chalk.green(certIp + ':' + certPort));
+  console.log('listening on: ' + chalk.green(ipPort));
+  console.log(chalk.black.bgGreenBright.bold('Open http://' + ipPort + ' on your phones browser ' +
+    'to install the root certificate.'));
 
   if (err) {
     console.log(err, err.stack.split('\n'));

@@ -12,15 +12,15 @@ To run it, just type `npm start`.
 ### Device configuration
 I think you all know how to configure a proxy server on your phone/tablet.
 For Android:
-> Proxy: Manual
-
-> Server Ip: IP of the computer where this proxy is running on
-
-> Server Port: 5050
-
+> Proxy: Manual   
+> Server Ip: IP of the computer where this proxy is running on   
+> Server Port: 5050   
 > Exclude for: 127.0.0.1
 
-To install the root certificate, open `ComputerIP:5051` in your phones webbrowser and accept the certificate installation. Your system could request you to set a security pattern (pin, password, etc), you have to do this.
+To install the root certificate, open the url which is visible in the log of the proxy on your phones webbrowser and accept the certificate installation.   
+It should look like this:   
+`Open http://XXX.XXX.XXX.XXX:5051 on your phones browser to install the root certificate.`   
+Your system could request you to set a security pattern (pin, password, etc), you have to do this.
 You have to install the certificate, it won't work without it.
 
 ### Important information for ProxyDroid user
@@ -28,111 +28,277 @@ In order to use ProxyDroid, you have to disable the whitelist feature, to do tha
 
 ### Proxy configuration
 By default the proxy is looking for the file `default.yml` inside the `config` folder. There are some example files, which can be renamed to `default.yml`, to use them.
-All available values can be found in `lib/config.js`.
+All available values can be found  below or in `lib/config.js`.
 For some of the basic settings, it is possible to pass them as command line arguments, e.g. `node bin/app.js --port 6050`.
 To load a different config file, use `node bin/app.js --config myconfig`, where `myconfig` is the file `config/myconfig.yml`.
 
 Available config keys:
 ```
-application:
-  cert:
-    ip: {}
-    port: {}
-  config:
-    format: string
-  dump:
-    get_battle_init_data:
-      format: boolean
-  proxy:
-    domains:
-      format: object
-    ip: {}
-    port: {}
-    whitelist:
-      format: boolean
-buddy:
-  attack:
-    abilitySpammer:
-      format: boolean
-    attributes:
-      format: array
-    counterAbility:
-      format: boolean
-    elementType: {}
-    hitAll:
-      format: boolean
-    multiHit:
-      format: number
-    quickAttack:
-      format: boolean
-    soulStrikeSpammer:
-      format: boolean
-    type: {}
-  stats:
-    acc:
-      format: number
-    atk:
-      format: number
-    def:
-      format: number
-    eva:
-      format: number
-    matk:
-      format: number
-    mdef:
-      format: number
-    mnd:
-      format: number
-    spd:
-      format: number
-  status:
-    format: array
-enemy:
-  defAttributes:
-    attributes:
-      format: array
-    enabled:
-      format: boolean
-  stats:
-    acc:
-      format: number
-    atk:
-      format: number
-    def:
-      format: number
-    eva:
-      format: number
-    matk:
-      format: number
-    mdef:
-      format: number
-    mnd:
-      format: number
-    spd:
-      format: number
-supporter:
-  attack:
-    soulStrikeSpammer:
-      format: boolean
-  stats:
-    acc:
-      format: number
-    atk:
-      format: number
-    matk:
-      format: number
-    mnd:
-      format: number
-magicite:
-    summon:
-        skillSpammer: boolean
-        duration: number
-        gaugeFillTime: number      
+application: 
+ properties: 
+  config: 
+   doc: "name of the config to load"
+   default: default
+   env: CONFIG
+   arg: config
+  debug: 
+   doc: "enable debug"
+   format: boolean
+   default: false
+   env: DEBUG
+   arg: debug
+  proxy: 
+   properties: 
+    ip: 
+     doc: "IP address to bind"
+     format: ipaddress
+     default: "0.0.0.0"
+     env: IP
+     arg: ip
+    port: 
+     doc: "port to bind"
+     format: port
+     default: 5050
+     env: PORT
+     arg: port
+    whitelist: 
+     doc: "use whitelist"
+     format: boolean
+     default: true
+     env: WHITELIST
+     arg: whitelist
+  cert: 
+   properties: 
+    ip: 
+     doc: "IP address to bind"
+     format: ipaddress
+     default: "0.0.0.0"
+    port: 
+     doc: "port to bind"
+     format: port
+     default: 5051
+     env: CERT_PORT
+     arg: "cert-port"
+  dump: 
+   properties: 
+    get_battle_init_data: 
+     doc: "dump the content of get_battle_init_data"
+     format: boolean
+     default: true
+buddy: 
+ properties: 
+  stats: 
+   properties: 
+    atk: 
+     doc: "atk of buddy"
+     format: number
+     default: 9999
+    def: 
+     doc: "def of buddy"
+     format: number
+     default: 9999
+    matk: 
+     doc: "matk of buddy"
+     format: number
+     default: 9999
+    mdef: 
+     doc: "mdef of buddy"
+     format: number
+     default: 9999
+    mnd: 
+     doc: "mnd of buddy"
+     format: number
+     default: 9999
+    acc: 
+     doc: "acc of buddy"
+     format: number
+     default: 9999
+    eva: 
+     doc: "eva of buddy"
+     format: number
+     default: 9999
+    spd: 
+     doc: "spd of buddy"
+     format: number
+     default: 9999
+  attack: 
+   properties: 
+    type: 
+     doc: "attack type"
+     format: 
+      - DIRECT
+      - INDIRECT
+     default: INDIRECT
+    attributes: 
+     doc: "attack attributes"
+     format: array
+     default: 
+      - POISON
+      - SILENCE
+      - PARALYSIS
+      - CONFUSION
+      - SLOW
+      - STOP
+      - BLINDED
+      - SLEEP
+      - DOOM
+      - BERSERKER
+      - SAP
+      - STUN
+    counterAbility: 
+     doc: "Sets all attacks to prevent counter-attacks from bosses"
+     format: boolean
+     default: true
+    hitAll: 
+     doc: "enables Hit-All/Zealot"
+     format: boolean
+     default: true
+    elementType: 
+     doc: "decides the type of element the attack will be"
+     format: 
+      - FIRE
+      - ICE
+      - THUNDER
+      - EARTH
+      - WIND
+      - WATER
+      - HOLY
+      - DARK
+      - BIO
+      - NONELE
+     default: NONELE
+    multiHit: 
+     doc: "decides how often Attack will hit"
+     format: number
+     default: 1
+    quickAttack: 
+     doc: "reduces cast time"
+     format: boolean
+     default: true
+    abilitySpammer: 
+     doc: "infinite amount of uses for abilities"
+     format: boolean
+     default: true
+    soulStrikeSpammer: 
+     doc: "allows all soul strikes to be instant-cast"
+     format: boolean
+     default: true
+  status: 
+   doc: "status ailments"
+   format: array
+   default: 
+    - HASTE
+    - PROTECT
+    - SHELL
+    - REGEN_STRONG
+    - COUNTER_AIMING
+    - RUNIC
+    - MIGHTY_GUARD_1
+enemy: 
+ properties: 
+  stats: 
+   properties: 
+    hp: 
+     doc: "hp of enemy"
+     format: number
+     default: 0
+    atk: 
+     doc: "atk of enemy"
+     format: number
+     default: 1
+    def: 
+     doc: "def of enemy"
+     format: number
+     default: 1
+    matk: 
+     doc: "matk of enemy"
+     format: number
+     default: 1
+    mdef: 
+     doc: "mdef of enemy"
+     format: number
+     default: 1
+    mnd: 
+     doc: "mnd of enemy"
+     format: number
+     default: 1
+    acc: 
+     doc: "acc of enemy"
+     format: number
+     default: 1
+    eva: 
+     doc: "eva of enemy"
+     format: number
+     default: 1
+    spd: 
+     doc: "spd of enemy"
+     format: number
+     default: 1
+  defAttributes: 
+   properties: 
+    enabled: 
+     doc: "change enemy def attributes"
+     format: boolean
+     default: true
+    attributes: 
+     doc: "defense attributes"
+     format: array
+     default: 
+supporter: 
+ properties: 
+  stats: 
+   properties: 
+    atk: 
+     doc: "atk of buddy"
+     format: number
+     default: 9999
+    matk: 
+     doc: "matk of buddy"
+     format: number
+     default: 9999
+    mnd: 
+     doc: "mnd of buddy"
+     format: number
+     default: 9999
+    acc: 
+     doc: "acc of buddy"
+     format: number
+     default: 9999
+  attack: 
+   properties: 
+    soulStrikeSpammer: 
+     doc: "allows all soul strikes to be instant-cast"
+     format: boolean
+     default: true
+magicite: 
+ properties: 
+  summon: 
+   properties: 
+    skillSpammer: 
+     doc: "allows all magicite skills to be instant-cast"
+     format: boolean
+     default: true
+    duration: 
+     doc: "duration of magicite skill"
+     format: number
+     default: 2000
+    gaugeFillTime: 
+     doc: "time to fill magicite gauge"
+     format: number
+     default: 1000
+rounds: 
+ properties: 
+  shortRounds: 
+   properties: 
+    enabled: 
+     doc: "reduce number of rounds to one (last), but keep all drops"
+     format: boolean
+     default: true
 ```
 
 ### Requirements:
 * Nodejs >= 0.12
 
 ### Thanks to:
-* KHShadowrunner
-* SirPhoenix88
+* SirPhoenix88   
+* Everyone on the [contributors](https://github.com/ThauEx/ffrk-proxy/graphs/contributors) page.
