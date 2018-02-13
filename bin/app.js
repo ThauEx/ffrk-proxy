@@ -77,6 +77,7 @@ http.createServer(function(request, response) {
 
     readStream.pipe(response);
   } else if (path === '/js/inject.js') {
+    console.log('inject file requested')
     filePath = __dirname + '/../public/inject.js';
     stat = fs.statSync(filePath);
 

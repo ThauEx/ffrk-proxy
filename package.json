@@ -2,9 +2,8 @@
   "name": "ffrk-proxy",
   "version": "0.11.0",
   "private": true,
-  "start": "node bin/app.js",
   "scripts": {
-    "start": "node bin/app.js"
+    "start": "node_modules/.bin/browserify -s inject -t brfs lib/inject.js -o public/inject.js && node bin/app.js"
   },
   "dependencies": {
     "address": "^1.0.3",
@@ -15,7 +14,7 @@
     "cli-table": "^0.3.1",
     "convict": "^4.0.2",
     "js-yaml": "^3.6.1",
-    "node-forge": "^0.7.1",
+    "node-forge": "^0.6.49",
     "request": ">=2.51.0"
   },
   "repository": {
