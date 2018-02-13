@@ -10,6 +10,8 @@
     "address": "^1.0.3",
     "bluebird": "^3.4.6",
     "chalk": "^2.3.1",
+    "brfs": "^1.4.4",
+    "browserify": "^16.0.0",
     "cli-table": "^0.3.1",
     "convict": "^4.0.2",
     "js-yaml": "^3.6.1",
