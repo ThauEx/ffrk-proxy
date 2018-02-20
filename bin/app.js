@@ -2,6 +2,7 @@ var address = require('address');
 var chalk = require('chalk');
 var fs = require('fs');
 var http = require('http');
+var path = require('path');
 
 var config = require(__dirname + '/../lib/config.js');
 
@@ -58,10 +59,18 @@ proxy.on('battleInitData', function(json, callback) {
 });
 
 http.createServer(function(request, response) {
-  var path = request.url;
+  var urlPath = request.url;
   var filePath;
   var stat;
   var readStream;
+  var jsFiles = [
+    '/js/inject.js',
+    '/js/buddy.js',
+    '/js/enemy.js',
+    '/js/magicite.js',
+    '/js/rounds.js',
+    '/js/supporter.js'
+  ];
 
   if (path === '/') {
     filePath = __dirname + '/../cert/root/rootCA.crt';
@@ -76,9 +85,10 @@ http.createServer(function(request, response) {
     readStream = fs.createReadStream(filePath);
 
     readStream.pipe(response);
-  } else if (path === '/js/inject.js') {
-    console.log('inject file requested')
-    filePath = __dirname + '/../public/inject.js';
+  } else if (jsFiles.indexOf(urlPath) !== -1) {
+    var file = path.parse(urlPath);
+    console.log('Injecting: File', file.base);
+    filePath = __dirname + '/../public/' + file.base;
     stat = fs.statSync(filePath);
 
     response.writeHead(200, {

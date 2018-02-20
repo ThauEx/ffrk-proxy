@@ -3,14 +3,12 @@
   "version": "0.11.0",
   "private": true,
   "scripts": {
-    "start": "node_modules/.bin/browserify -s inject -t brfs lib/inject.js -o public/inject.js && node bin/app.js"
+    "start": "node_modules/.bin/babel --plugins 'inline-json,../babel/config-plugin.js' lib/filter/*.js --out-dir public/ && mv public/lib/filter/* public && rm -rf public/lib && node bin/app.js"
   },
   "dependencies": {
     "address": "^1.0.3",
     "bluebird": "^3.4.6",
     "chalk": "^2.3.1",
-    "brfs": "^1.4.4",
-    "browserify": "^16.0.0",
     "cli-table": "^0.3.1",
     "convict": "^4.0.2",
     "js-yaml": "^3.6.1",
@@ -26,6 +24,8 @@
   },
   "license": "LGPL-3.0",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-inline-json": "^1.2.2",
     "jscs": "^3.0.0"
   }
 }
