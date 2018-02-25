@@ -104,7 +104,6 @@ http.createServer(function(request, response) {
     response.end();
   }
 
-
 }).listen(certPort, certIp, function(err) {
   var ipPort = certIp + ':' + certPort;
   console.log(chalk.black.bgWhite.bold('rootCA webserver') + chalk.black.bgWhite(' started'));

@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "address": "^1.0.3",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-inline-json": "^1.2.2",
     "bluebird": "^3.4.6",
     "chalk": "^2.3.1",
     "cli-table": "^0.3.1",
@@ -24,8 +26,6 @@
   },
   "license": "LGPL-3.0",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-inline-json": "^1.2.2",
     "jscs": "^3.0.0"
   }
 }

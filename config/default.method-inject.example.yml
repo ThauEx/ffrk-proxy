@@ -1,0 +1,3 @@
+application:
+    proxy:
+        method: inject
