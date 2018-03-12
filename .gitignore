@@ -1,6 +1,7 @@
 dump/*
 .tern-project
 .vscode
+.idea
 bin/node.exe
 public/*.js
 node_modules
