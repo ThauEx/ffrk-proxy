@@ -72,7 +72,7 @@ http.createServer(function(request, response) {
     '/js/supporter.js'
   ];
 
-  if (path === '/') {
+  if (urlPath === '/') {
     filePath = __dirname + '/../cert/root/rootCA.crt';
     stat = fs.statSync(filePath);
 

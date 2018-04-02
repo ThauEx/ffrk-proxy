@@ -20,7 +20,7 @@ cert.generateForHost(
   caKey,
   Math.floor(Date.now() / 1000),
   certJpCallback
-)
+);
 
 function certWweCallback(err, pem) {
   fs.writeFileSync(__dirname + '/../cert/wwe.crt', pem.certificate);
