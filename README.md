@@ -297,7 +297,7 @@ rounds:
 ```
 
 ### Requirements:
-* Nodejs >= 0.12
+* Nodejs >= 8.0
 
 ### Thanks to:
 * SirPhoenix88   

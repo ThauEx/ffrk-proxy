@@ -1,3 +1,3 @@
 @echo off
-bin\node.exe bin\app.js
+powershell.exe -command "& '.\start.ps1'"
 pause
