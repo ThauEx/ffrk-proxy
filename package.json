@@ -2,18 +2,21 @@
   "name": "ffrk-proxy",
   "version": "0.11.0",
   "private": true,
-  "start": "node bin/app.js",
   "scripts": {
-    "start": "node bin/app.js"
+    "start": "node_modules/.bin/babel --plugins inline-json,../babel/config-plugin.js lib/filter/*.js --out-dir public/ && mv public/lib/filter/* public && rm -rf public/lib && node bin/app.js",
+    "renew-root-ca": "openssl req -x509 -new -nodes -extensions v3_ca -key cert/root/rootCA.key -days 2048 -out cert/root/rootCA.crt -subj '/O=ffrk-proxy/CN=ffrk-proxy'",
+    "renew-certs": "node tests/createCertificate.js"
   },
   "dependencies": {
     "address": "^1.0.3",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-inline-json": "^1.2.2",
     "bluebird": "^3.4.6",
     "chalk": "^2.3.1",
     "cli-table": "^0.3.1",
     "convict": "^4.0.2",
     "js-yaml": "^3.6.1",
-    "node-forge": "^0.7.1",
+    "node-forge": "^0.6.49",
     "request": ">=2.51.0"
   },
   "repository": {

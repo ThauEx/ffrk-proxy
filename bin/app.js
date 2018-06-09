@@ -2,6 +2,7 @@ var address = require('address');
 var chalk = require('chalk');
 var fs = require('fs');
 var http = require('http');
+var path = require('path');
 
 var config = require(__dirname + '/../lib/config.js');
 
@@ -58,18 +59,51 @@ proxy.on('battleInitData', function(json, callback) {
 });
 
 http.createServer(function(request, response) {
-  var filePath = __dirname + '/../cert/root/rootCA.crt';
-  var stat = fs.statSync(filePath);
+  var urlPath = request.url;
+  var filePath;
+  var stat;
+  var readStream;
+  var jsFiles = [
+    '/js/inject.js',
+    '/js/buddy.js',
+    '/js/enemy.js',
+    '/js/magicite.js',
+    '/js/rounds.js',
+    '/js/supporter.js'
+  ];
 
-  response.writeHead(200, {
-    'Content-Type': 'application/x-x509-ca-cert',
-    'Content-Disposition': 'attachment; filename="rootCa.pem";',
-    'Content-Length': stat.size,
-  });
+  if (urlPath === '/') {
+    filePath = __dirname + '/../cert/root/rootCA.crt';
+    stat = fs.statSync(filePath);
 
-  var readStream = fs.createReadStream(filePath);
+    response.writeHead(200, {
+      'Content-Type': 'application/x-x509-ca-cert',
+      'Content-Disposition': 'attachment; filename="rootCa.pem";',
+      'Content-Length': stat.size,
+    });
 
-  readStream.pipe(response);
+    readStream = fs.createReadStream(filePath);
+
+    readStream.pipe(response);
+  } else if (jsFiles.indexOf(urlPath) !== -1) {
+    var file = path.parse(urlPath);
+    console.log('Injecting: File', file.base);
+    filePath = __dirname + '/../public/' + file.base;
+    stat = fs.statSync(filePath);
+
+    response.writeHead(200, {
+      'Content-Type': 'text/javascript',
+      'Content-Length': stat.size,
+    });
+
+    readStream = fs.createReadStream(filePath);
+
+    readStream.pipe(response);
+  } else {
+    response.writeHead(404);
+    response.end();
+  }
+
 }).listen(certPort, certIp, function(err) {
   var ipPort = certIp + ':' + certPort;
   console.log(chalk.black.bgWhite.bold('rootCA webserver') + chalk.black.bgWhite(' started'));

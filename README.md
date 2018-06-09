@@ -26,6 +26,16 @@ You have to install the certificate, it won't work without it.
 ### Important information for ProxyDroid user
 In order to use ProxyDroid, you have to disable the whitelist feature, to do that, rename or copy the file `default.no-whitelist.example.yml` to `default.yml` inside the config folder.
 
+### Working methods
+ffrk-proxy has two working method, the first is the `intercept` (default) method and the second one `inject`.
+To change the working method, check the two sample configs in the config folder.
+
+**Interception method:**
+- Intercepts the battle data request and modifies the data and then sends it to the client. This has the benefit to be able to see the whole data related to the battle, like enemies per round, drops etc.
+
+**Injection method:**
+- Injects into a html file custom javascript, which lets the client modify the data for you. This should still work, even when the battle data gets transfered encrypted. The downside is not being able to see the battle data anymore and some filters are not working (yet)
+
 ### Proxy configuration
 By default the proxy is looking for the file `default.yml` inside the `config` folder. There are some example files, which can be renamed to `default.yml`, to use them.
 All available values can be found  below or in `lib/config.js`.
@@ -67,6 +77,10 @@ application:
      default: true
      env: WHITELIST
      arg: whitelist
+    method:
+     doc: "proxy working method"
+     format: ["intercept", "inject"],
+     default: "intercept"
   cert: 
    properties: 
     ip: 
@@ -297,7 +311,7 @@ rounds:
 ```
 
 ### Requirements:
-* Nodejs >= 0.12
+* Nodejs >= 8.0
 
 ### Thanks to:
 * SirPhoenix88   
