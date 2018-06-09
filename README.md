@@ -11,6 +11,13 @@ To run it, just type `npm start`.
 
 ### Device configuration
 I think you all know how to configure a proxy server on your phone/tablet.
+Automatic:
+Set the proxy option to `Proxy Auto-Config` and enter the url which is shown when starting the proxy.   
+It should look like this:   
+`Enter this url in your automatic proxy settings http://XXX.XXX.XXX.XXX:5051/proxy.pac`
+
+
+(legacy)
 For Android:
 > Proxy: Manual   
 > Server Ip: IP of the computer where this proxy is running on   

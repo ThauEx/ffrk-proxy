@@ -25,15 +25,15 @@ var proxy = new FFRKProxy(certStore);
 
 var proxyIp = config.get('application.proxy.ip');
 var proxyPort = config.get('application.proxy.port');
-var certIp = config.get('application.cert.ip');
-var certPort = config.get('application.cert.port');
+var staticIp = config.get('application.cert.ip');
+var staticPort = config.get('application.cert.port');
 
 if (proxyIp === '0.0.0.0') {
   proxyIp = address.ip();
 }
 
-if (certIp === '0.0.0.0') {
-  certIp = address.ip();
+if (staticIp === '0.0.0.0') {
+  staticIp = address.ip();
 }
 
 proxy.listen(proxyPort, proxyIp, function(err) {
@@ -99,17 +99,30 @@ http.createServer(function(request, response) {
     readStream = fs.createReadStream(filePath);
 
     readStream.pipe(response);
+  } else if (urlPath === '/proxy.pac') {
+    var responseData = 'function FindProxyForURL(url, host) {\n' +
+      '   if (shExpMatch(host, \'ffrk.denagames.com\') || shExpMatch(host, \'dff.sp.mbga.jp\')) {\n' +
+      '     return \'PROXY ' + proxyIp + ':' + proxyPort + '; DIRECT\';\n' +
+      '   }\n' +
+      '\n' +
+      '   return \'DIRECT\';\n' +
+      '}\n';
+
+    response.writeHead(200, {
+      'Content-Type': 'application/x-ns-proxy-autoconfig',
+      'Content-Length': responseData.length,
+    });
+   response.end(responseData);
   } else {
     response.writeHead(404);
     response.end();
   }
 
-}).listen(certPort, certIp, function(err) {
-  var ipPort = certIp + ':' + certPort;
-  console.log(chalk.black.bgWhite.bold('rootCA webserver') + chalk.black.bgWhite(' started'));
+}).listen(staticPort, staticIp, function(err) {
+  var ipPort = staticIp + ':' + staticPort;
+  console.log(chalk.black.bgWhite.bold('static webserver') + chalk.black.bgWhite(' started'));
   console.log('listening on: ' + chalk.green(ipPort));
-  console.log(chalk.black.bgGreenBright.bold('Open http://' + ipPort + ' on your phones browser ' +
-    'to install the root certificate.'));
+  console.log(chalk.black.bgGreenBright.bold('Enter this url as proxy configuration url http://' + ipPort + '/proxy.pac'));
 
   if (err) {
     console.log(err, err.stack.split('\n'));
