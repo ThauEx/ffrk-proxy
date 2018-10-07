@@ -11,13 +11,12 @@
     "address": "^1.0.3",
     "babel-cli": "^6.26.0",
     "babel-plugin-inline-json": "^1.2.2",
-    "bluebird": "^3.4.6",
-    "chalk": "^2.3.1",
+    "chalk": "^2.4.1",
     "cli-table": "^0.3.1",
-    "convict": "^4.0.2",
-    "js-yaml": "^3.6.1",
+    "convict": "^4.4.0",
+    "js-yaml": "^3.12.0",
     "node-forge": "^0.6.49",
-    "request": ">=2.51.0"
+    "request": "^2.88.0"
   },
   "repository": {
     "type": "git",
@@ -27,7 +26,5 @@
     "url": "https://github.com/ThauEx/ffrk-proxy/issues"
   },
   "license": "LGPL-3.0",
-  "devDependencies": {
-    "jscs": "^3.0.0"
-  }
+  "devDependencies": {}
 }
