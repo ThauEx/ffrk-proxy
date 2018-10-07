@@ -12,7 +12,7 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-inline-json": "^1.2.2",
     "chalk": "^2.4.1",
-    "cli-table": "^0.3.1",
+    "cli-table": "git+ssh://git@github.com/Automattic/cli-table.git",
     "convict": "^4.4.0",
     "js-yaml": "^3.12.0",
     "node-forge": "^0.6.49",
