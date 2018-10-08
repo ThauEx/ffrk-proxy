@@ -69,9 +69,9 @@ http.createServer(function(request, response) {
     '/js/enemy.js',
     '/js/magicite.js',
     '/js/rounds.js',
-    '/js/supporter.js'
+    '/js/supporter.js',
   ];
-
+  console.log('[static] requesting: ' + urlPath)
   if (urlPath === '/') {
     filePath = __dirname + '/../cert/root/rootCA.crt';
     stat = fs.statSync(filePath);
@@ -112,7 +112,7 @@ http.createServer(function(request, response) {
       'Content-Type': 'application/x-ns-proxy-autoconfig',
       'Content-Length': responseData.length,
     });
-   response.end(responseData);
+    response.end(responseData);
   } else {
     response.writeHead(404);
     response.end();

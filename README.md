@@ -1,40 +1,38 @@
 # ffrk-proxy​
 
 ### Installation
-**On Windows**:
-Go to the release page and download one of the windows releases (x86 or x64).
-To start the proxy, just run `start.bat` and when your firewall is asking, please allow the access. Nodejs has to open a port, where the server is running.
+**On Windows**:    
+Go to the release page and download one of the windows releases (x86 or x64).    
+To start the proxy, just run `start.bat` and when your firewall is asking, please allow the access. Node.js has to open a port, where the server is running.    
 
 **On Linux and Mac**:
-Install Nodejs first via package manager, then run `npm install`.
-To run it, just type `npm start`.
+Install Nodejs first via package manager, then run `npm install`.    
+To run it, just type `npm start`.    
 
 ### Device configuration
-I think you all know how to configure a proxy server on your phone/tablet.
-Automatic:
-Set the proxy option to `Proxy Auto-Config` and enter the url which is shown when starting the proxy.   
+I think you all know how to configure a proxy server on your phone/tablet.    
+Automatic:    
+Set the proxy option to `Proxy Auto-Config`/`Automatic` and enter the url which is shown when starting the proxy.    
 It should look like this:   
 `Enter this url in your automatic proxy settings http://XXX.XXX.XXX.XXX:5051/proxy.pac`
 
+On **iOS** you have to install the certificate, it won't work without it.    
+To install the root certificate, open the url which is visible in the log of the proxy on your phones web browser and accept the certificate installation.    
+It should look like this:    
+`Open http://XXX.XXX.XXX.XXX:5051 on your phones browser to install the root certificate.`    
+Your system could request you to set a security pattern (pin, password, etc), you have to do this.    
 
-(legacy)
-For Android:
+> For Android (legacy):
 > Proxy: Manual   
 > Server Ip: IP of the computer where this proxy is running on   
 > Server Port: 5050   
 > Exclude for: 127.0.0.1
 
-To install the root certificate, open the url which is visible in the log of the proxy on your phones webbrowser and accept the certificate installation.   
-It should look like this:   
-`Open http://XXX.XXX.XXX.XXX:5051 on your phones browser to install the root certificate.`   
-Your system could request you to set a security pattern (pin, password, etc), you have to do this.
-You have to install the certificate, it won't work without it.
-
 ### Important information for ProxyDroid user
 In order to use ProxyDroid, you have to disable the whitelist feature, to do that, rename or copy the file `default.no-whitelist.example.yml` to `default.yml` inside the config folder.
 
 ### Working methods
-ffrk-proxy has two working method, the first is the `intercept` (default) method and the second one `inject`.
+ffrk-proxy has two working method, the first is the `intercept` (default) method and the second one `inject`.    
 To change the working method, check the two sample configs in the config folder.
 
 **Interception method:**
@@ -44,9 +42,9 @@ To change the working method, check the two sample configs in the config folder.
 - Injects into a html file custom javascript, which lets the client modify the data for you. This should still work, even when the battle data gets transfered encrypted. The downside is not being able to see the battle data anymore and some filters are not working (yet)
 
 ### Proxy configuration
-By default the proxy is looking for the file `default.yml` inside the `config` folder. There are some example files, which can be renamed to `default.yml`, to use them.
-All available values can be found  below or in `lib/config.js`.
-For some of the basic settings, it is possible to pass them as command line arguments, e.g. `node bin/app.js --port 6050`.
+By default the proxy is looking for the file `default.yml` inside the `config` folder. There are some example files, which can be renamed to `default.yml`, to use them.    
+All available values can be found  below or in `lib/config.js`.    
+For some of the basic settings, it is possible to pass them as command line arguments, e.g. `node bin/app.js --port 6050`.    
 To load a different config file, use `node bin/app.js --config myconfig`, where `myconfig` is the file `config/myconfig.yml`.
 
 Available config keys:
