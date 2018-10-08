@@ -1,6 +1,6 @@
 {
   "name": "ffrk-proxy",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "private": true,
   "scripts": {
     "start": "node_modules/.bin/babel --plugins inline-json,../babel/config-plugin.js lib/filter/*.js --out-dir public/ && mv public/lib/filter/* public && rm -rf public/lib && node bin/app.js",
