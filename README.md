@@ -16,17 +16,32 @@ Set the proxy option to `Proxy Auto-Config`/`Automatic` and enter the url which 
 It should look like this:   
 `Enter this url in your automatic proxy settings http://XXX.XXX.XXX.XXX:5051/proxy.pac`
 
+#### iOS
+
 On **iOS** you have to install the certificate, it won't work without it.    
 To install the root certificate, open the url which is visible in the log of the proxy on your phones web browser and accept the certificate installation.    
 It should look like this:    
-`Open http://XXX.XXX.XXX.XXX:5051 on your phones browser to install the root certificate.`    
-Your system could request you to set a security pattern (pin, password, etc), you have to do this.    
+`Open this url on your phone and accept the installation of the profile/certificate http://XXX.XXX.XXX.XXX:5051`    
+Your system could request you to set a security pattern (pin, password, etc), you have to do this.  
+(This might be different for older iOS versions)
+
+- Open *Setting*
+- Navigate to *General*
+- Navigate to *Profile*
+- Select *ffrk-proxy*
+- Install the profile
+- Navigate back to *Profile*
+- Navigate to *About*
+- Navigate to *Certificate Trust Settings*
+- Toggle *ffrk-proxy* on
+---
 
 > For Android (legacy):
 > Proxy: Manual   
 > Server Ip: IP of the computer where this proxy is running on   
 > Server Port: 5050   
 > Exclude for: 127.0.0.1
+---
 
 ### Important information for ProxyDroid user
 In order to use ProxyDroid, you have to disable the whitelist feature, to do that, rename or copy the file `default.no-whitelist.example.yml` to `default.yml` inside the config folder.

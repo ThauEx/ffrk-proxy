@@ -122,6 +122,7 @@ http.createServer(function(request, response) {
   const ipPort = staticIp + ':' + staticPort;
   console.log(chalk.black.bgWhite.bold('static webserver') + chalk.black.bgWhite(' started'));
   console.log('listening on: ' + chalk.green(ipPort));
+  console.log(chalk.black.bgGreenBright.bold('Open this url on your phone and accept the installation of the profile/certificate http://' + ipPort));
   console.log(chalk.black.bgGreenBright.bold('Enter this url as proxy configuration url http://' + ipPort + '/proxy.pac'));
 
   if (err) {
